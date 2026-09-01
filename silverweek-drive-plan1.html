@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>和純と香子で楽しむシルバーウィーク！｜日帰りドライブ 5コース</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17334F;
+  --ink-soft:#41576D;
+  --paper:#F1ECDF;
+  --paper-deep:#E4DBC5;
+  --red:#B93A2B;
+  --sea:#2A6E77;
+  --gold:#C8912A;
+  --rule:rgba(23,51,79,.22);
+  --mincho:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  background-image:
+    repeating-linear-gradient(0deg,rgba(23,51,79,.022) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(90deg,rgba(23,51,79,.018) 0 1px,transparent 1px 4px);
+  color:var(--ink);
+  font-family:var(--gothic);
+  font-size:16px;
+  line-height:1.85;
+  letter-spacing:.02em;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 72px}
+
+/* ---------- 表紙 ---------- */
+.cover{
+  background:var(--ink);
+  color:var(--paper);
+  padding:34px 20px 30px;
+  position:relative;
+  overflow:hidden;
+}
+.cover::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:7px;
+  background:repeating-linear-gradient(90deg,var(--red) 0 26px,var(--gold) 26px 40px,var(--sea) 40px 62px,var(--ink) 62px 72px);
+  opacity:.85;
+}
+.cover__inner{
+  max-width:860px;margin:0 auto;
+  display:flex;gap:22px;align-items:flex-start;justify-content:space-between;
+}
+.cover__title{
+  writing-mode:vertical-rl;
+  font-family:var(--mincho);
+  font-weight:800;
+  font-size:clamp(26px,7.4vw,40px);
+  line-height:1.42;
+  letter-spacing:.14em;
+  margin:0;
+  height:min(62vh,430px);
+  text-shadow:0 0 24px rgba(0,0,0,.25);
+}
+.cover__title .accent{color:#F2C46A}
+.cover__meta{
+  writing-mode:vertical-rl;
+  font-size:13px;letter-spacing:.24em;line-height:2.1;
+  color:rgba(241,236,223,.72);
+  margin-top:6px;
+  font-family:var(--mincho);
+}
+.cover__side{flex:1;padding-top:8px}
+.cal{
+  border:1px solid rgba(241,236,223,.32);
+  padding:14px 12px 12px;
+  max-width:300px;
+  margin-left:auto;
+}
+.cal__cap{font-size:11.5px;letter-spacing:.18em;color:rgba(241,236,223,.62);margin:0 0 9px;font-family:var(--mincho)}
+.cal__days{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;text-align:center}
+.cal__day{border:1px solid rgba(241,236,223,.28);padding:6px 2px 5px;line-height:1.3}
+.cal__day b{display:block;font-family:var(--mincho);font-size:19px;font-weight:700}
+.cal__day span{display:block;font-size:9.5px;color:rgba(241,236,223,.6);letter-spacing:.04em}
+.cal__day.hol{background:rgba(185,58,43,.5);border-color:transparent}
+.cal__note{font-size:11.5px;line-height:1.75;color:rgba(241,236,223,.68);margin:10px 0 0}
+.cover__blurb{
+  max-width:300px;margin:16px 0 0 auto;
+  font-size:13px;line-height:1.95;color:rgba(241,236,223,.86);
+}
+
+/* ---------- 見出し ---------- */
+.sec-title{
+  font-family:var(--mincho);
+  font-weight:800;
+  font-size:21px;
+  letter-spacing:.1em;
+  margin:56px 0 4px;
+  padding-bottom:8px;
+  border-bottom:2px solid var(--ink);
+}
+.sec-lead{font-size:14px;color:var(--ink-soft);margin:12px 0 22px;max-width:56ch}
+
+/* ---------- くらべ表 ---------- */
+.compare{display:grid;gap:0;border-top:1px solid var(--rule)}
+.compare a{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:2px 14px;
+  padding:14px 4px;
+  border-bottom:1px solid var(--rule);
+  text-decoration:none;color:inherit;
+  align-items:baseline;
+}
+.compare a:hover,.compare a:focus-visible{background:var(--paper-deep)}
+.compare .c-name{font-family:var(--mincho);font-weight:700;font-size:17px;letter-spacing:.04em}
+.compare .c-num{font-size:12.5px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+.compare .c-desc{grid-column:1/-1;font-size:13px;color:var(--ink-soft);line-height:1.7}
+
+/* ---------- コース ---------- */
+.plan{margin-top:60px;padding-top:26px;border-top:3px double var(--ink)}
+.plan__head{display:flex;gap:18px;align-items:flex-start}
+.stamp{
+  flex:0 0 auto;
+  width:76px;height:76px;border-radius:50%;
+  border:2px solid var(--red);
+  box-shadow:inset 0 0 0 2.5px var(--paper),inset 0 0 0 4px var(--red);
+  color:var(--red);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:var(--mincho);font-weight:700;font-size:15px;line-height:1.3;letter-spacing:.06em;
+  transform:rotate(-7deg);
+  opacity:.92;
+}
+.plan__t{flex:1;min-width:0}
+.plan__route{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);margin:2px 0 6px;font-family:var(--mincho)}
+.plan h2{
+  font-family:var(--mincho);font-weight:800;
+  font-size:clamp(22px,5.6vw,28px);line-height:1.45;letter-spacing:.04em;
+  margin:0 0 10px;
+}
+.plan__lead{margin:0;font-size:14.5px;line-height:1.95;color:var(--ink-soft);max-width:60ch}
+
+.facts{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);
+  margin:22px 0 26px;
+}
+.facts div{background:var(--paper);padding:10px 12px}
+.facts dt{font-size:11px;letter-spacing:.14em;color:var(--ink-soft);font-family:var(--mincho)}
+.facts dd{margin:2px 0 0;font-size:14px;font-weight:500;line-height:1.6}
+
+.route{list-style:none;margin:0;padding:0 0 0 4px}
+.route li{
+  display:grid;grid-template-columns:58px 1fr;gap:0 16px;
+  padding:0 0 20px;position:relative;
+}
+.route li::before{
+  content:"";position:absolute;left:64px;top:11px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--sea);
+}
+.route li::after{
+  content:"";position:absolute;left:68px;top:22px;bottom:-2px;
+  border-left:1px dashed var(--sea);opacity:.55;
+}
+.route li:last-child{padding-bottom:0}
+.route li:last-child::after{display:none}
+.route time{
+  font-family:var(--mincho);font-weight:700;font-size:15px;
+  font-variant-numeric:tabular-nums;letter-spacing:.02em;
+  padding-top:1px;color:var(--ink);
+}
+.route .spot{padding-left:18px}
+.route h3{margin:0;font-size:15.5px;font-weight:700;line-height:1.6;letter-spacing:.03em}
+.route p{margin:3px 0 0;font-size:13.5px;line-height:1.85;color:var(--ink-soft);max-width:52ch}
+
+.tip{
+  margin:24px 0 0;padding:14px 16px;
+  background:var(--paper-deep);
+  border-left:4px solid var(--gold);
+  font-size:13.5px;line-height:1.9;
+}
+.tip b{font-family:var(--mincho);letter-spacing:.08em}
+
+/* ---------- 裏表紙 ---------- */
+.memo{margin-top:64px;padding:26px 22px;background:var(--ink);color:var(--paper)}
+.memo h2{font-family:var(--mincho);font-weight:800;font-size:19px;letter-spacing:.1em;margin:0 0 16px}
+.memo ul{margin:0;padding-left:1.15em}
+.memo li{font-size:14px;line-height:1.95;margin-bottom:9px;color:rgba(241,236,223,.9)}
+.memo li b{color:#F2C46A;font-weight:700}
+.fine{margin:26px 0 0;font-size:11.5px;line-height:1.8;color:var(--ink-soft);text-align:center}
+
+@media (min-width:700px){
+  .facts{grid-template-columns:repeat(4,1fr)}
+  .cover{padding:44px 20px 40px}
+  .route li{grid-template-columns:70px 1fr}
+  .route li::before{left:76px}
+  .route li::after{left:80px}
+}
+@media (max-width:520px){
+  .cover__inner{flex-direction:row}
+  .cover__title{height:min(58vh,360px)}
+  .cal{max-width:none}
+  .plan__head{gap:12px}
+  .stamp{width:64px;height:64px;font-size:13px}
+}
+@media print{
+  body{background:#fff}
+  .plan{break-inside:avoid}
+  .cover{background:#fff;color:#17334F}
+}
+a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover__inner">
+    <h1 class="cover__title">和純と香子で楽しむ<br><span class="accent">シルバーウィーク！</span></h1>
+    <p class="cover__meta">日帰りドライブ 五つの行き先</p>
+    <div class="cover__side">
+      <div class="cal">
+        <p class="cal__cap">2026年9月・11年ぶりの5連休</p>
+        <div class="cal__days">
+          <div class="cal__day hol"><b>19</b><span>土</span></div>
+          <div class="cal__day hol"><b>20</b><span>日</span></div>
+          <div class="cal__day hol"><b>21</b><span>敬老</span></div>
+          <div class="cal__day hol"><b>22</b><span>国民</span></div>
+          <div class="cal__day hol"><b>23</b><span>秋分</span></div>
+        </div>
+        <p class="cal__note">敬老の日と秋分の日に挟まれた22日が「国民の休日」になり、土曜から5日つながります。</p>
+      </div>
+      <p class="cover__blurb">山の川風か、炭火のハンバーグか、朝どれの海鮮か。どれも朝に出て夜には帰ってこられる距離です。ページを下にたどって、二人の気分に合う一日を選んでください。</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2 class="sec-title">行き先をくらべる</h2>
+  <p class="sec-lead">片道の距離と、その日いちばんの楽しみで並べています。名前をタップすると、その日の行程に飛びます。</p>
+
+  <nav class="compare">
+    <a href="#okutama">
+      <span class="c-name">奥多摩・御岳渓谷</span>
+      <span class="c-num">片道 約80km／1時間30分</span>
+      <span class="c-desc">高速代がいちばん安く、川のそばを歩いて過ごす一日。出発が遅くなった朝でも成立します。</span>
+    </a>
+    <a href="#nagatoro">
+      <span class="c-name">長瀞・秩父</span>
+      <span class="c-num">片道 約90km／1時間40分</span>
+      <span class="c-desc">荒川をライン下りで進み、岩畳を歩いて、帰りに温泉。川で遊びたいならここ。</span>
+    </a>
+    <a href="#gotemba">
+      <span class="c-name">御殿場・三島（さわやか）</span>
+      <span class="c-num">片道 約100km／1時間40分</span>
+      <span class="c-desc">げんこつハンバーグが主役。受付の取り方さえ押さえれば、あとは富士山麓をのんびり。</span>
+    </a>
+    <a href="#nakaminato">
+      <span class="c-name">那珂湊・大洗</span>
+      <span class="c-num">片道 約120km／2時間</span>
+      <span class="c-desc">朝いちの市場で海鮮、昼に海浜公園、夕方は海の鳥居。海だけで一日が埋まります。</span>
+    </a>
+    <a href="#nikko">
+      <span class="c-name">奥日光・中禅寺湖</span>
+      <span class="c-num">片道 約160km／2時間30分</span>
+      <span class="c-desc">いちばん遠く、いちばん景色が大きい。早起きできる日だけの選択肢です。</span>
+    </a>
+  </nav>
+
+  <!-- 1 -->
+  <article class="plan" id="okutama">
+    <div class="plan__head">
+      <div class="stamp">奥多摩<br>青梅</div>
+      <div class="plan__t">
+        <p class="plan__route">圏央道 青梅IC ／ 青梅街道</p>
+        <h2>川音でいちにち、多摩川をさかのぼる</h2>
+        <p class="plan__lead">都心から2時間かからずに、水が透けて見える渓谷に着いてしまう贅沢なコース。歩く距離は自分たちで決められて、疲れたらすぐ車に戻れます。5連休の中でも渋滞リスクがいちばん低い行き先です。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約170km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 1万円前後</dd></div>
+      <div><dt>歩く量</dt><dd>のんびり 5,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>ゆるやか</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>7:30</time><div class="spot"><h3>出発</h3><p>圏央道で青梅ICへ。コンビニの朝ごはんは買わずに、渓谷のベンチまで我慢するのがおすすめ。</p></div></li>
+      <li><time>9:00</time><div class="spot"><h3>御岳渓谷遊歩道</h3><p>多摩川の両岸に約4kmの遊歩道。カヌーの練習をしている人を眺めながら片道30分ほど歩けば、朝の空気で目が覚めます。</p></div></li>
+      <li><time>10:30</time><div class="spot"><h3>鳩ノ巣渓谷</h3><p>吊り橋から見下ろす淵の色がきれい。駐車場が小さいので、埋まっていたら無理せず先へ。</p></div></li>
+      <li><time>11:30</time><div class="spot"><h3>奥多摩湖・麦山の浮橋</h3><p>通称ドラム缶橋。湖面に浮かぶ橋を渡ると足元がわずかに揺れます。水位によって通行止めになることがあるので、着いてから判断を。</p></div></li>
+      <li><time>12:30</time><div class="spot"><h3>昼ごはん</h3><p>奥多摩駅周辺の蕎麦か、湖畔の食堂で。連休は昼のピークが読めないので、早めか遅めにずらすのが安全。</p></div></li>
+      <li><time>14:00</time><div class="spot"><h3>日原鍾乳洞</h3><p>中は年間を通して11度前後。半袖だと本気で寒いので、薄手の上着を車に積んでおきます。細い一本道なので、対向車のすれ違いは慎重に。</p></div></li>
+      <li><time>16:00</time><div class="spot"><h3>澤乃井園（小澤酒造）</h3><p>多摩川に張り出した休憩所で、和菓子とお茶。運転する側はもちろん飲めないので、日本酒はお土産にして家で開ける方向で。</p></div></li>
+      <li><time>17:30</time><div class="spot"><h3>帰路</h3><p>青梅街道は夕方に流れが悪くなります。急がず、途中で夕飯を食べてから帰るくらいの気持ちで。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>山道の運転が続くので、ガソリンは奥多摩に入る前に入れておくこと。奥多摩湖から先はスタンドがぐっと減ります。</p>
+  </article>
+
+  <!-- 2 -->
+  <article class="plan" id="nagatoro">
+    <div class="plan__head">
+      <div class="stamp">長瀞<br>秩父</div>
+      <div class="plan__t">
+        <p class="plan__route">関越道 花園IC ／ 国道140号</p>
+        <h2>荒川を下って、岩畳に寝転ぶ</h2>
+        <p class="plan__lead">船に乗る予定がひとつ入るだけで、一日の骨格が決まります。午前にライン下り、午後は秩父の街か山へ、締めは温泉。二人で乗る舟は、写真より記憶に残るほうの体験です。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約190km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 1.5〜2万円</dd></div>
+      <div><dt>歩く量</dt><dd>ほどほど 7,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>午前がねらい目</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>7:00</time><div class="spot"><h3>出発</h3><p>関越道の下りは連休初日の朝がいちばん重いので、6時台に乗ってしまえるとかなり違います。</p></div></li>
+      <li><time>8:40</time><div class="spot"><h3>長瀞に到着、受付</h3><p>ライン下りは当日受付が基本。着いたらまず舟の時間を押さえて、それから朝ごはんを探すのが正解です。</p></div></li>
+      <li><time>9:30</time><div class="spot"><h3>長瀞ライン下り</h3><p>船頭さんの竿さばきで岩の間を抜けていく約1時間。9月下旬の川風は思ったより涼しいので、羽織るものを持って乗船を。</p></div></li>
+      <li><time>11:00</time><div class="spot"><h3>岩畳を歩く</h3><p>川沿いに広がる巨大な岩の段。座って川を眺めているだけで時間が溶けます。足元が濡れていると滑るのでスニーカーで。</p></div></li>
+      <li><time>12:00</time><div class="spot"><h3>天然氷のかき氷</h3><p>長瀞は天然氷のかき氷が名物。人気店は待ちが長いので、行列を見て無理そうなら潔く諦めて次へ。</p></div></li>
+      <li><time>13:00</time><div class="spot"><h3>秩父市街でおそい昼</h3><p>わらじカツ丼か、秩父そば。秩父神社に寄って、番場通りの古い建物を眺めながら歩くのも気持ちいい時間です。</p></div></li>
+      <li><time>15:00</time><div class="spot"><h3>秩父ミューズパーク（旅立ちの丘）</h3><p>盆地を見下ろす展望台。もう一段のぼりたい気分なら、三峯神社まで山道を1時間という選択もあります（帰りが遅くなる覚悟で）。</p></div></li>
+      <li><time>16:30</time><div class="spot"><h3>温泉でしめる</h3><p>西武秩父駅前の日帰り温泉なら、そのまま夕飯まで済ませられます。汗を流してから帰ると、渋滞もそこまで苦になりません。</p></div></li>
+      <li><time>18:30</time><div class="spot"><h3>帰路</h3><p>花園ICから関越で東京方面へ。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>ライン下りは増水すると運休や区間短縮になります。前日と当日朝に運航状況を確認して、だめだった場合の代案（宝登山ロープウェイなど）を頭に置いておくと慌てません。</p>
+  </article>
+
+  <!-- 3 -->
+  <article class="plan" id="gotemba">
+    <div class="plan__head">
+      <div class="stamp">静岡<br>御殿場</div>
+      <div class="plan__t">
+        <p class="plan__route">東名 御殿場IC ／ 新東名 長泉沼津IC</p>
+        <h2>げんこつハンバーグを軸に、富士の裾野をまわる</h2>
+        <p class="plan__lead">さわやかは予約ができません。だからこの一日は「受付を取る」ことから始めて、順番を待つ時間を観光に変えてしまう組み立てにします。肉が主役でも、まわりの景色は水と橋と富士山です。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約210km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 2万円前後</dd></div>
+      <div><dt>歩く量</dt><dd>ほどほど 6,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>覚悟が必要</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>6:30</time><div class="spot"><h3>出発</h3><p>東名の下りは朝が勝負。海老名を過ぎるまでに流れておきたいところです。</p></div></li>
+      <li><time>8:30</time><div class="spot"><h3>御殿場に到着</h3><p>御殿場インター店はスマホからの受付発券が9時開始。到着したらまず受付、それから動き出します。連休は数時間待ちが当たり前なので、待ち時間ありきで一日を設計するのが唯一の攻略法です。</p></div></li>
+      <li><time>9:30</time><div class="spot"><h3>秩父宮記念公園、または乙女峠</h3><p>順番が来るまでの散歩。晴れていれば富士山がかなり近くに見えます。呼び出しに備えて、店から30分以上離れないのが鉄則。</p></div></li>
+      <li><time>11:30</time><div class="spot"><h3>さわやか（げんこつハンバーグ）</h3><p>牛肉100％の丸いハンバーグを、目の前で半分に切って鉄板で仕上げてくれます。ソースはオニオンとデミの二択。白いごはんとの相性がいいので、パンよりライスがおすすめ。</p></div></li>
+      <li><time>13:30</time><div class="spot"><h3>三島スカイウォーク</h3><p>全長400mの歩行者専用吊り橋。渡っている最中は思ったより揺れます。橋の先には森のアクティビティやカフェもあり、そのまま2時間ほど過ごせます。</p></div></li>
+      <li><time>15:30</time><div class="spot"><h3>柿田川湧水公園</h3><p>富士山に降った水が地面から湧き出している場所。展望台から覗き込むと、青い井戸のような湧き間が見えます。入園無料で、滞在は40分ほど。</p></div></li>
+      <li><time>16:30</time><div class="spot"><h3>沼津港でお土産</h3><p>干物や海産物を買って車へ。もう少し歩ける体力があれば、深海水族館という手も。</p></div></li>
+      <li><time>17:30</time><div class="spot"><h3>帰路</h3><p>東名の上りは夕方から確実に混みます。18時台に突っ込むより、沼津で早めの軽い夕飯を挟んで19時以降に走り出すほうが、結果的に早く帰れることが多いです。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>受付は前日には取れません。当日、受付開始の時刻ちょうどにスマホを触れる状態にしておくこと。御殿場プレミアム・アウトレット店とインター店は別受付なので、狙いをどちらかに決めてから向かいます。</p>
+  </article>
+
+  <!-- 4 -->
+  <article class="plan" id="nakaminato">
+    <div class="plan__head">
+      <div class="stamp">茨城<br>那珂湊</div>
+      <div class="plan__t">
+        <p class="plan__route">常磐道 ひたち海浜公園IC ／ 北関東道</p>
+        <h2>朝いちの市場から、海の鳥居まで</h2>
+        <p class="plan__lead">那珂湊は「早く着いた人が勝つ」場所です。開場と同時に入って海鮮を食べてしまえば、そのあとの一日がまるごと自由になります。9月は春のネモフィラ期のような大混雑がなく、海沿いを気持ちよく流せる時期。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約250km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 1.5〜2万円</dd></div>
+      <div><dt>歩く量</dt><dd>しっかり 9,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>朝だけ本気を出す</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>6:20</time><div class="spot"><h3>出発</h3><p>常磐道で北へ。三郷から先は比較的流れます。</p></div></li>
+      <li><time>8:30</time><div class="spot"><h3>那珂湊おさかな市場</h3><p>土日祝は8時半ごろから動き出します。この時間なら市場前の駐車場にすんなり入れる可能性が高い。回転寿司も浜焼きも、開店直後がいちばん静かです。</p></div></li>
+      <li><time>10:30</time><div class="spot"><h3>市場をひやかす</h3><p>その場で食べる以外に、氷詰めにして持ち帰るという楽しみ方も。保冷バッグを積んでいくと選択肢が広がります。</p></div></li>
+      <li><time>11:15</time><div class="spot"><h3>国営ひたち海浜公園</h3><p>みはらしの丘のコキアは、この時期はまだ緑から色づき始めのころ。丸い株が一面に並ぶ光景は紅葉期とは別物で、しかも人が少ない。園内は広いのでレンタサイクルが快適です。</p></div></li>
+      <li><time>14:00</time><div class="spot"><h3>大洗磯前神社・神磯の鳥居</h3><p>岩礁の上に立つ鳥居に波がぶつかります。海岸沿いの道からも見えますが、参道の階段を上がって振り返る景色のほうが記憶に残るはず。</p></div></li>
+      <li><time>15:30</time><div class="spot"><h3>アクアワールド大洗、またはめんたいパーク</h3><p>まだ歩けるなら水族館（サメの種類が国内有数）、疲れていたら明太子の直売所で軽く済ませて海を見る、の二択で。</p></div></li>
+      <li><time>17:00</time><div class="spot"><h3>帰路</h3><p>常磐道の上りは夕方に柏あたりで詰まります。守谷SAで一息入れて時間をずらすのが定番の逃げ方。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>市場の駐車場は正面が有料、繁忙日は近くの卸売市場敷地が無料の臨時駐車場として開くことがあります（開門は10時ごろで、15時には出さないといけないタイプ）。朝いちで行くなら正面に停めてしまうのがいちばん簡単です。</p>
+  </article>
+
+  <!-- 5 -->
+  <article class="plan" id="nikko">
+    <div class="plan__head">
+      <div class="stamp">奥日光<br>中禅寺</div>
+      <div class="plan__t">
+        <p class="plan__route">東北道 宇都宮IC ／ 日光宇都宮道路</p>
+        <h2>いろは坂をのぼって、標高1,300mの秋へ</h2>
+        <p class="plan__lead">5つの中でいちばん遠く、いちばん朝が早い。その代わり、滝と湖と湿原が半日で全部出てきます。9月下旬の奥日光はもう秋のはじまりで、朝は10度台まで下がることも。上着は必ず積んでください。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約330km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 2〜2.5万円</dd></div>
+      <div><dt>歩く量</dt><dd>たっぷり 12,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>いろは坂しだい</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>5:30</time><div class="spot"><h3>出発</h3><p>この日だけは早起きが必須。いろは坂は昼前から詰まり始めるので、8時台に上がりきってしまうのが理想です。</p></div></li>
+      <li><time>8:15</time><div class="spot"><h3>明智平ロープウェイ</h3><p>第二いろは坂の途中にある展望台へ。中禅寺湖と華厳ノ滝を同じ画面で見下ろせる場所は、ここだけです。駐車場が小さいので早い時間に。</p></div></li>
+      <li><time>9:30</time><div class="spot"><h3>華厳ノ滝</h3><p>エレベーターで一気に下って、正面から落差97mを見上げます。水しぶきで空気がひんやりするので、上着があると快適。</p></div></li>
+      <li><time>11:00</time><div class="spot"><h3>中禅寺湖畔</h3><p>イタリア大使館別荘記念公園まで湖岸を歩くと、湖に向かって開いた縁側のような建物にたどり着きます。畳に座って湖を眺める時間がこの日のハイライト。</p></div></li>
+      <li><time>12:30</time><div class="spot"><h3>昼ごはん</h3><p>湯波（ゆば）料理か、湖畔のカフェで軽く。日光の湯波は京都のものより厚くて食べごたえがあります。</p></div></li>
+      <li><time>13:45</time><div class="spot"><h3>竜頭の滝</h3><p>岩を二股に分けて流れ落ちる滝。滝壺の茶屋から見る構図が有名です。周囲の木が少し色づき始めている頃。</p></div></li>
+      <li><time>14:30</time><div class="spot"><h3>戦場ヶ原ハイキング</h3><p>赤沼から湿原の木道へ。往復1時間ほどでも十分に開けた景色が楽しめます。時間と体力があれば湯滝まで抜けるコースも。</p></div></li>
+      <li><time>16:00</time><div class="spot"><h3>下山、帰路</h3><p>下りのいろは坂は一方通行なので流れは比較的スムーズ。東照宮まで足を伸ばすと確実に時間が足りないので、そこは次の機会に取っておきます。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>いろは坂は上りと下りで別の道です。上り（第二いろは坂）の渋滞を避けられるかどうかで一日の質が変わるので、出発を1時間早めるのがいちばん効く投資になります。</p>
+  </article>
+
+  <section class="memo">
+    <h2>出かける前のメモ</h2>
+    <ul>
+      <li><b>日にちの選び方　</b>下りの高速は19日（土）の午前が最も重く、上りは23日（水）の午後がピークになりがちです。二人の予定が合うなら、真ん中の<b>21日（月）か22日（火）</b>が比較的動きやすい日。</li>
+      <li><b>帰りの時間　</b>15時前に走り出すか、19時以降までずらすか。中途半端な17〜18時台がいちばん損をします。現地で夕飯を食べてから帰るほうが、車内の空気も穏やかです。</li>
+      <li><b>服装　</b>9月下旬でも標高が上がると朝晩は肌寒く、奥日光や鍾乳洞は薄手の上着が必要。逆に日中の平地はまだ暑いので、脱ぎ着できる格好で。</li>
+      <li><b>積んでおくもの　</b>羽織もの、スニーカー、日焼け止め、モバイルバッテリー、保冷バッグ（那珂湊のとき）、そして眠くなったとき用の飲みもの。</li>
+      <li><b>運転の分担　</b>片道2時間を超えるコースは、行きと帰りで交代できると本当に楽になります。免許と保険の条件だけ先に確認しておくこと。</li>
+    </ul>
+  </section>
+
+  <p class="fine">掲載の所要時間・費用・営業条件は2026年9月時点のおおよその目安です。<br>受付方法や料金、運航・開園の状況は、出発前に各施設の公式情報でご確認ください。</p>
+
+</div>
+</body>
+</html>
