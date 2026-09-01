@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>和純と香子で楽しむシルバーウィーク！其の二｜日帰りドライブ もう5コース</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17334F;
+  --ink-soft:#41576D;
+  --paper:#F1ECDF;
+  --paper-deep:#E4DBC5;
+  --red:#B93A2B;
+  --sea:#2A6E77;
+  --gold:#C8912A;
+  --rule:rgba(23,51,79,.22);
+  --mincho:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  background-image:
+    repeating-linear-gradient(0deg,rgba(23,51,79,.022) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(90deg,rgba(23,51,79,.018) 0 1px,transparent 1px 4px);
+  color:var(--ink);
+  font-family:var(--gothic);
+  font-size:16px;
+  line-height:1.85;
+  letter-spacing:.02em;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 72px}
+
+/* ---------- 表紙 ---------- */
+.cover{
+  background:var(--ink);
+  color:var(--paper);
+  padding:34px 20px 30px;
+  position:relative;
+  overflow:hidden;
+}
+.cover::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:7px;
+  background:repeating-linear-gradient(90deg,var(--red) 0 26px,var(--gold) 26px 40px,var(--sea) 40px 62px,var(--ink) 62px 72px);
+  opacity:.85;
+}
+.cover__inner{
+  max-width:860px;margin:0 auto;
+  display:flex;gap:22px;align-items:flex-start;justify-content:space-between;
+}
+.cover__title{
+  writing-mode:vertical-rl;
+  font-family:var(--mincho);
+  font-weight:800;
+  font-size:clamp(26px,7.4vw,40px);
+  line-height:1.42;
+  letter-spacing:.14em;
+  margin:0;
+  height:min(62vh,430px);
+  text-shadow:0 0 24px rgba(0,0,0,.25);
+}
+.cover__title .accent{color:#F2C46A}
+.cover__meta{
+  writing-mode:vertical-rl;
+  font-size:13px;letter-spacing:.24em;line-height:2.1;
+  color:rgba(241,236,223,.72);
+  margin-top:6px;
+  font-family:var(--mincho);
+}
+.cover__side{flex:1;padding-top:8px}
+.cal{
+  border:1px solid rgba(241,236,223,.32);
+  padding:14px 12px 12px;
+  max-width:300px;
+  margin-left:auto;
+}
+.cal__cap{font-size:11.5px;letter-spacing:.18em;color:rgba(241,236,223,.62);margin:0 0 9px;font-family:var(--mincho)}
+.cal__days{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;text-align:center}
+.cal__day{border:1px solid rgba(241,236,223,.28);padding:6px 2px 5px;line-height:1.3}
+.cal__day b{display:block;font-family:var(--mincho);font-size:19px;font-weight:700}
+.cal__day span{display:block;font-size:9.5px;color:rgba(241,236,223,.6);letter-spacing:.04em}
+.cal__day.hol{background:rgba(185,58,43,.5);border-color:transparent}
+.cal__note{font-size:11.5px;line-height:1.75;color:rgba(241,236,223,.68);margin:10px 0 0}
+.cover__blurb{
+  max-width:300px;margin:16px 0 0 auto;
+  font-size:13px;line-height:1.95;color:rgba(241,236,223,.86);
+}
+
+/* ---------- 見出し ---------- */
+.sec-title{
+  font-family:var(--mincho);
+  font-weight:800;
+  font-size:21px;
+  letter-spacing:.1em;
+  margin:56px 0 4px;
+  padding-bottom:8px;
+  border-bottom:2px solid var(--ink);
+}
+.sec-lead{font-size:14px;color:var(--ink-soft);margin:12px 0 22px;max-width:56ch}
+
+/* ---------- くらべ表 ---------- */
+.compare{display:grid;gap:0;border-top:1px solid var(--rule)}
+.compare a{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:2px 14px;
+  padding:14px 4px;
+  border-bottom:1px solid var(--rule);
+  text-decoration:none;color:inherit;
+  align-items:baseline;
+}
+.compare a:hover,.compare a:focus-visible{background:var(--paper-deep)}
+.compare .c-name{font-family:var(--mincho);font-weight:700;font-size:17px;letter-spacing:.04em}
+.compare .c-num{font-size:12.5px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+.compare .c-desc{grid-column:1/-1;font-size:13px;color:var(--ink-soft);line-height:1.7}
+
+/* ---------- コース ---------- */
+.plan{margin-top:60px;padding-top:26px;border-top:3px double var(--ink)}
+.plan__head{display:flex;gap:18px;align-items:flex-start}
+.stamp{
+  flex:0 0 auto;
+  width:76px;height:76px;border-radius:50%;
+  border:2px solid var(--red);
+  box-shadow:inset 0 0 0 2.5px var(--paper),inset 0 0 0 4px var(--red);
+  color:var(--red);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:var(--mincho);font-weight:700;font-size:15px;line-height:1.3;letter-spacing:.06em;
+  transform:rotate(-7deg);
+  opacity:.92;
+}
+.plan__t{flex:1;min-width:0}
+.plan__route{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);margin:2px 0 6px;font-family:var(--mincho)}
+.plan h2{
+  font-family:var(--mincho);font-weight:800;
+  font-size:clamp(22px,5.6vw,28px);line-height:1.45;letter-spacing:.04em;
+  margin:0 0 10px;
+}
+.plan__lead{margin:0;font-size:14.5px;line-height:1.95;color:var(--ink-soft);max-width:60ch}
+
+.facts{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);
+  margin:22px 0 26px;
+}
+.facts div{background:var(--paper);padding:10px 12px}
+.facts dt{font-size:11px;letter-spacing:.14em;color:var(--ink-soft);font-family:var(--mincho)}
+.facts dd{margin:2px 0 0;font-size:14px;font-weight:500;line-height:1.6}
+
+.route{list-style:none;margin:0;padding:0 0 0 4px}
+.route li{
+  display:grid;grid-template-columns:58px 1fr;gap:0 16px;
+  padding:0 0 20px;position:relative;
+}
+.route li::before{
+  content:"";position:absolute;left:64px;top:11px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--sea);
+}
+.route li::after{
+  content:"";position:absolute;left:68px;top:22px;bottom:-2px;
+  border-left:1px dashed var(--sea);opacity:.55;
+}
+.route li:last-child{padding-bottom:0}
+.route li:last-child::after{display:none}
+.route time{
+  font-family:var(--mincho);font-weight:700;font-size:15px;
+  font-variant-numeric:tabular-nums;letter-spacing:.02em;
+  padding-top:1px;color:var(--ink);
+}
+.route .spot{padding-left:18px}
+.route h3{margin:0;font-size:15.5px;font-weight:700;line-height:1.6;letter-spacing:.03em}
+.route p{margin:3px 0 0;font-size:13.5px;line-height:1.85;color:var(--ink-soft);max-width:52ch}
+
+.tip{
+  margin:24px 0 0;padding:14px 16px;
+  background:var(--paper-deep);
+  border-left:4px solid var(--gold);
+  font-size:13.5px;line-height:1.9;
+}
+.tip b{font-family:var(--mincho);letter-spacing:.08em}
+
+/* ---------- 裏表紙 ---------- */
+.memo{margin-top:64px;padding:26px 22px;background:var(--ink);color:var(--paper)}
+.memo h2{font-family:var(--mincho);font-weight:800;font-size:19px;letter-spacing:.1em;margin:0 0 16px}
+.memo ul{margin:0;padding-left:1.15em}
+.memo li{font-size:14px;line-height:1.95;margin-bottom:9px;color:rgba(241,236,223,.9)}
+.memo li b{color:#F2C46A;font-weight:700}
+.fine{margin:26px 0 0;font-size:11.5px;line-height:1.8;color:var(--ink-soft);text-align:center}
+
+@media (min-width:700px){
+  .facts{grid-template-columns:repeat(4,1fr)}
+  .cover{padding:44px 20px 40px}
+  .route li{grid-template-columns:70px 1fr}
+  .route li::before{left:76px}
+  .route li::after{left:80px}
+}
+@media (max-width:520px){
+  .cover__inner{flex-direction:row}
+  .cover__title{height:min(58vh,360px)}
+  .cal{max-width:none}
+  .plan__head{gap:12px}
+  .stamp{width:64px;height:64px;font-size:13px}
+}
+@media print{
+  body{background:#fff}
+  .plan{break-inside:avoid}
+  .cover{background:#fff;color:#17334F}
+}
+a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover__inner">
+    <h1 class="cover__title">和純と香子で楽しむ<br><span class="accent">シルバーウィーク！其の二</span></h1>
+    <p class="cover__meta">日帰りドライブ さらに五つの行き先</p>
+    <div class="cover__side">
+      <div class="cal">
+        <p class="cal__cap">2026年9月・11年ぶりの5連休</p>
+        <div class="cal__days">
+          <div class="cal__day hol"><b>19</b><span>土</span></div>
+          <div class="cal__day hol"><b>20</b><span>日</span></div>
+          <div class="cal__day hol"><b>21</b><span>敬老</span></div>
+          <div class="cal__day hol"><b>22</b><span>国民</span></div>
+          <div class="cal__day hol"><b>23</b><span>秋分</span></div>
+        </div>
+        <p class="cal__note">5日あるので、方角を変えて二日出かけるという贅沢もできます。</p>
+      </div>
+      <p class="cover__blurb">今度は東西南北にひとつずつ。房総の断崖、那須の早い紅葉、富士の正面、盆地のぶどう畑、上州の石段。前の五つとかぶらない行き先だけを並べました。</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2 class="sec-title">行き先をくらべる</h2>
+  <p class="sec-lead">片道の距離と、その日いちばんの楽しみで並べています。名前をタップすると、その日の行程に飛びます。</p>
+
+  <nav class="compare">
+    <a href="#nokogiri">
+      <span class="c-name">鋸山・房総金谷</span>
+      <span class="c-num">片道 約100km／1時間20分</span>
+      <span class="c-desc">アクアラインで海の上を走り、断崖から東京湾を見下ろして、アジフライで締める南のコース。</span>
+    </a>
+    <a href="#katsunuma">
+      <span class="c-name">勝沼・昇仙峡</span>
+      <span class="c-num">片道 約100km／1時間30分</span>
+      <span class="c-desc">ぶどうが一年でいちばんおいしい週。畑で食べて、渓谷を歩いて、夜景の湯に浸かります。</span>
+    </a>
+    <a href="#kawaguchiko">
+      <span class="c-name">河口湖・富士吉田</span>
+      <span class="c-num">片道 約110km／1時間50分</span>
+      <span class="c-desc">一日ずっと富士山が正面にいるコース。朝がいちばん見える確率が高いので、早出が効きます。</span>
+    </a>
+    <a href="#ikaho">
+      <span class="c-name">榛名湖・伊香保</span>
+      <span class="c-num">片道 約130km／1時間50分</span>
+      <span class="c-desc">湖と杉並木の神社と365段の石段。歩いて、うどんを食べて、温泉で終わる素直な一日。</span>
+    </a>
+    <a href="#nasu">
+      <span class="c-name">那須高原</span>
+      <span class="c-num">片道 約180km／2時間30分</span>
+      <span class="c-desc">日本でいちばん早い紅葉のひとつ。茶臼岳の上はもう秋が始まっています。</span>
+    </a>
+  </nav>
+
+  <!-- 1 -->
+  <article class="plan" id="nokogiri">
+    <div class="plan__head">
+      <div class="stamp">房総<br>鋸山</div>
+      <div class="plan__t">
+        <p class="plan__route">アクアライン ／ 富津館山道路 富津金谷IC</p>
+        <h2>海の上を走って、断崖から東京湾をのぞく</h2>
+        <p class="plan__lead">道そのものが観光になる珍しいコース。アクアラインで海の真ん中に降り立ち、そのまま房総へ渡って、石を切り出した跡の絶壁に立ちます。海鮮はアジ。那珂湊とはまったく違う味の海です。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約210km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 1.5万円前後</dd></div>
+      <div><dt>歩く量</dt><dd>階段が多め 9,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>10時からが本番</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>6:30</time><div class="spot"><h3>出発</h3><p>アクアラインへ。連休は上りも下りも昼前後が重くなるので、朝のうちに渡ってしまいます。</p></div></li>
+      <li><time>7:20</time><div class="spot"><h3>海ほたるPA</h3><p>海の真ん中のパーキング。デッキに出ると360度が海で、朝は風が気持ちいい。ここで朝ごはんを済ませておくと、あとが楽。</p></div></li>
+      <li><time>8:30</time><div class="spot"><h3>鋸山ロープウェー</h3><p>山麓駅から4分で標高329mの山頂へ。駐車場は500円ほど。土日祝は10時を過ぎると混み始めるので、この時間に着けているのが理想です。</p></div></li>
+      <li><time>9:00</time><div class="spot"><h3>日本寺・地獄のぞき</h3><p>拝観料は大人700円ほど。突き出た岩の先から100m下の石切場をのぞき込みます。混雑時は展望台の順番待ちが出ることも。近くの「ラピュタの壁」と呼ばれる垂直の絶壁もあわせて。</p></div></li>
+      <li><time>10:30</time><div class="spot"><h3>百尺観音、そして下山</h3><p>大仏まで下りると、戻りに30〜40分の登り返しが待っています。体力と相談して、無理なら山頂側だけで切り上げるのが賢明。</p></div></li>
+      <li><time>11:30</time><div class="spot"><h3>金谷で昼ごはん</h3><p>港のすぐそばで、黄金アジのフライか海鮮丼。厚みのあるアジフライは房総の名物で、想像より一段大きいので二人で分けるくらいがちょうどいい量です。</p></div></li>
+      <li><time>13:30</time><div class="spot"><h3>濃溝の滝・亀岩の洞窟</h3><p>洞窟の穴から差す光がハート形に見えるのは早朝の限られた時期だけ。日中はその写真は撮れませんが、苔と水音だけの静かな渓流散歩として十分きれいです。</p></div></li>
+      <li><time>15:00</time><div class="spot"><h3>マザー牧場、または保田の直売所</h3><p>牧場で高台から東京湾を眺めるか、漁協の直売所で干物を買って帰るか。どちらを選ぶかで一日の後味が変わります。</p></div></li>
+      <li><time>16:30</time><div class="spot"><h3>帰路</h3><p>アクアラインの上りは夕方にかなり詰まります。海ほたるで夕景を見ながら1時間つぶすほうが、渋滞の中にいるより気分がいい。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>帰りを変化球にするなら、金谷から東京湾フェリーで久里浜へ渡る手があります。車ごと約40分の船旅で、そのまま横須賀・三浦経由の帰り道に。アクアラインの渋滞を丸ごと回避できて、船に乗ること自体がイベントになります。</p>
+  </article>
+
+  <!-- 2 -->
+  <article class="plan" id="katsunuma">
+    <div class="plan__head">
+      <div class="stamp">甲州<br>勝沼</div>
+      <div class="plan__t">
+        <p class="plan__route">中央道 勝沼IC ／ 甲府昭和IC</p>
+        <h2>ぶどうをもいで、渓谷を歩いて、夜景の湯へ</h2>
+        <p class="plan__lead">この週末がぶどうの当たり日です。シャインマスカットも巨峰もピオーネも、9月下旬がちょうど最盛期。畑で食べてから渓谷を歩き、盆地を見下ろす露天風呂で終わる、味と景色の欲張りコース。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約220km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 1.5〜2万円</dd></div>
+      <div><dt>歩く量</dt><dd>ほどほど 8,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>小仏トンネルが山場</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>6:30</time><div class="spot"><h3>出発</h3><p>中央道の下りは小仏トンネル手前が詰まります。7時前に八王子を抜けられると、その後はずっと快適。</p></div></li>
+      <li><time>8:30</time><div class="spot"><h3>ぶどう狩り</h3><p>勝沼には30種類以上を育てている園もあります。9月下旬はシャインマスカットが最盛期で、巨峰やピオーネも並ぶ贅沢な時期。食べ放題の園もあれば、もぎ取って持ち帰る園もあるので、好みで選んで。</p></div></li>
+      <li><time>10:30</time><div class="spot"><h3>ぶどうの丘</h3><p>丘の上から一面のぶどう畑を見渡せます。地下のワインカーヴでは試飲もできますが、運転する側は当然パス。気に入った1本を買って、家で開けるほうが楽しみが伸びます。</p></div></li>
+      <li><time>12:00</time><div class="spot"><h3>昼ごはん</h3><p>ほうとうか、甲州の鳥もつ煮。ほうとうは量が多いので、頼みすぎに注意です。</p></div></li>
+      <li><time>13:30</time><div class="spot"><h3>昇仙峡</h3><p>甲府から北へ。切り立った覚円峰を見上げながら渓谷沿いを歩き、仙娥滝まで。紅葉本番は11月なので、9月はまだ人が少なくて歩きやすい時期です。滞在は2時間ほど。</p></div></li>
+      <li><time>16:00</time><div class="spot"><h3>ほったらかし温泉</h3><p>甲府盆地をまるごと見下ろす露天風呂。日が落ちる時間に入れると、湯に浸かったまま街の明かりが一つずつ点いていくのが見えます。この日のためだけに行っても後悔しない場所。</p></div></li>
+      <li><time>18:00</time><div class="spot"><h3>帰路</h3><p>中央道の上りは相模湖から八王子で渋滞しがち。表示によっては圏央道まわりのほうが早いこともあるので、出る前にルートを比べておくこと。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>ぶどう狩りは園によって完全予約制のところと、当日ふらっと入れるところがあります。連休は前者が埋まりやすいので、行きたい園が決まっているなら数日前に電話を。土が柔らかいことがあるので、足元はスニーカーで。</p>
+  </article>
+
+  <!-- 3 -->
+  <article class="plan" id="kawaguchiko">
+    <div class="plan__head">
+      <div class="stamp">富士<br>河口湖</div>
+      <div class="plan__t">
+        <p class="plan__route">中央道 河口湖IC ／ 東富士五湖道路</p>
+        <h2>一日じゅう、富士山が正面にいる</h2>
+        <p class="plan__lead">御殿場が富士山の裾を横から見る一日なら、こちらは正面から向き合う一日。ただし午後は雲が出やすいので、いちばんの絶景を朝に置く構成にしています。写真を撮りたい日はこちらです。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約230km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 1.5万円前後</dd></div>
+      <div><dt>歩く量</dt><dd>階段あり 9,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>午前が勝負</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>6:00</time><div class="spot"><h3>出発</h3><p>富士山が雲に隠れる前に着きたいので、この日はとにかく早出。中央道の小仏トンネルも同じ理由で早いほど有利です。</p></div></li>
+      <li><time>8:00</time><div class="spot"><h3>新倉山浅間公園</h3><p>五重塔と富士山を一枚に収められる展望デッキへ。398段の階段が待っていますが、登りきった先の眺めは階段の記憶を上書きしてくれます。息が上がるので水を持って。</p></div></li>
+      <li><time>9:30</time><div class="spot"><h3>富士山パノラマロープウェイ</h3><p>河口湖畔から天上山の展望台へ3分ほど。眼下に湖、正面に富士山という構図で、歩かずに絶景が手に入る貴重な場所です。</p></div></li>
+      <li><time>11:00</time><div class="spot"><h3>大石公園</h3><p>湖の北岸、花畑ごしに富士山が立つ定番スポット。この時期は丸いコキアが緑から色づき始めるころで、湖と山と丸い株が一列に並びます。</p></div></li>
+      <li><time>12:30</time><div class="spot"><h3>ほうとう</h3><p>かぼちゃの溶けた味噌のつゆに、平たい麺。歩いたあとの体に染みます。人気店は昼のピークに行列ができるので、11時台か13時台にずらすのも手。</p></div></li>
+      <li><time>14:00</time><div class="spot"><h3>忍野八海</h3><p>富士山の伏流水が湧く8つの池。水の透明度が異様に高く、底の水草がそのまま見えます。狭い集落に人が集中するので、駐車場は素直に有料のところへ。</p></div></li>
+      <li><time>15:30</time><div class="spot"><h3>道の駅なるさわ、または湖畔のカフェ</h3><p>お土産を買って、最後にもう一度富士山を眺めてから帰り支度。</p></div></li>
+      <li><time>16:30</time><div class="spot"><h3>帰路</h3><p>中央道の上りは夕方に長く伸びます。焦らず、途中のPAで休みながら。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>富士山は午前中のほうが見える確率が高く、昼を過ぎると雲がかかりやすくなります。もし朝の時点で山が完全に隠れていたら、無理に展望スポットを回らず、忍野八海と食べ物に予定を寄せてしまうほうが満足度は高いはず。</p>
+  </article>
+
+  <!-- 4 -->
+  <article class="plan" id="ikaho">
+    <div class="plan__head">
+      <div class="stamp">上州<br>伊香保</div>
+      <div class="plan__t">
+        <p class="plan__route">関越道 渋川伊香保IC</p>
+        <h2>榛名湖から石段街へ、坂を下りていく一日</h2>
+        <p class="plan__lead">朝は標高1,000mの湖、昼は杉並木の参道、夕方は温泉街の石段。山の上から順に下りてくるだけで一日がきれいに組み上がります。締めが温泉なので、帰りの車内が静かで穏やかになるコース。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約270km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 1.5万円前後</dd></div>
+      <div><dt>歩く量</dt><dd>石段と参道 10,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>おだやか</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>7:00</time><div class="spot"><h3>出発</h3><p>関越道で渋川伊香保ICへ。そこから榛名山を一気に登ります。</p></div></li>
+      <li><time>8:40</time><div class="spot"><h3>榛名湖・榛名富士</h3><p>カルデラ湖と、その真ん中に立つ形のいい山。ロープウェイで榛名富士の山頂に上がると、関東平野の方まで見渡せます。朝の湖畔は空気が澄んでいて、9月下旬なら少し肌寒いくらい。</p></div></li>
+      <li><time>10:30</time><div class="spot"><h3>榛名神社</h3><p>参道の杉並木を15分ほど歩いて、巨大な岩に寄り添うように建つ社殿へ。渓流と奇岩と杉に囲まれた道は、それ自体が目的地になる気持ちよさです。往復1時間半を見ておくこと。</p></div></li>
+      <li><time>12:30</time><div class="spot"><h3>水沢うどん</h3><p>讃岐、稲庭と並ぶと言われる群馬のうどん。冷たいざるで、まいたけの天ぷらを添えるのが定番の食べ方です。</p></div></li>
+      <li><time>14:00</time><div class="spot"><h3>伊香保 石段街</h3><p>365段の石段の両側に、射的や温泉まんじゅうの店が並びます。上の伊香保神社側の駐車場に停めて、下りながら歩くのが体力的に正解。焼きまんじゅうは食べ歩き向きです。</p></div></li>
+      <li><time>15:30</time><div class="spot"><h3>日帰り温泉</h3><p>石段街の途中の共同浴場か、少し上の露天風呂へ。茶色い「黄金の湯」が伊香保の顔で、湯上がりの体が長く温かいままです。</p></div></li>
+      <li><time>17:00</time><div class="spot"><h3>帰路</h3><p>関越の上りは高坂から先が混みやすいところ。時間が合えば途中で夕飯を挟んで、ピークを外して帰ります。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>榛名湖から伊香保へ下る道は、カーブが続くうえに勾配もそこそこあります。同乗する側が酔いやすいなら、この区間だけ窓を開けて、飛ばさずゆっくり下ること。</p>
+  </article>
+
+  <!-- 5 -->
+  <article class="plan" id="nasu">
+    <div class="plan__head">
+      <div class="stamp">那須<br>高原</div>
+      <div class="plan__t">
+        <p class="plan__route">東北道 那須IC ／ 那須高原SIC</p>
+        <h2>日本でいちばん早い秋を、先に見に行く</h2>
+        <p class="plan__lead">茶臼岳の紅葉は9月下旬から色づき始めます。ほとんどの人がまだ夏の格好をしている時期に、山の上だけ先に秋になっている。その時間差を見に行くのがこの一日の主題です。</p>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>走行</dt><dd>往復 約360km</dd></div>
+      <div><dt>費用の目安</dt><dd>二人で 2〜2.5万円</dd></div>
+      <div><dt>歩く量</dt><dd>山道あり 11,000歩</dd></div>
+      <div><dt>混み具合</dt><dd>山頂の駐車場が鍵</dd></div>
+    </dl>
+    <ol class="route">
+      <li><time>5:30</time><div class="spot"><h3>出発</h3><p>この日も早起きが必要。ロープウェイの駐車場は午前中の早い時間に埋まることがあり、そうなると下から順番待ちになります。</p></div></li>
+      <li><time>8:00</time><div class="spot"><h3>那須ロープウェイ（茶臼岳）</h3><p>標高1,684mの山頂駅へ。そこから牛ヶ首方面へ歩けば、岩と噴煙と色づき始めた斜面が一度に見られます。強風で運休になることがあるので、当日朝の運行状況は必ず確認を。</p></div></li>
+      <li><time>10:30</time><div class="spot"><h3>殺生石</h3><p>硫黄のにおいが立ちこめる荒れた河原。柵の外は立入禁止で、木も生えない一帯が続きます。木道の散策は30分ほど。</p></div></li>
+      <li><time>11:30</time><div class="spot"><h3>南ヶ丘牧場</h3><p>入場も駐車も無料の牧場。濃いジャージー牛乳とソフトクリームが目当てです。動物との距離が近く、のんびりするのにちょうどいい場所。</p></div></li>
+      <li><time>13:00</time><div class="spot"><h3>昼ごはん</h3><p>那須街道沿いにはベーカリーやカフェが点在しています。牧場でだいぶ食べているはずなので、軽めで十分。</p></div></li>
+      <li><time>14:00</time><div class="spot"><h3>つつじ吊橋、または美術館</h3><p>森の上に架かる長い吊り橋を渡るか、ステンドグラス美術館のような屋内で静かに過ごすか。天気で決められるのが那須のいいところです。</p></div></li>
+      <li><time>15:30</time><div class="spot"><h3>チーズガーデン那須本店</h3><p>御用邸チーズケーキを買って帰路へ。ここで買うお土産が、翌日の朝ごはんになります。</p></div></li>
+      <li><time>16:30</time><div class="spot"><h3>帰路</h3><p>東北道の上りは佐野から先で流れが悪くなりがち。休憩を長めに取って、時間をずらしながら帰ります。</p></div></li>
+    </ol>
+    <p class="tip"><b>この日のコツ　</b>山頂駅から先は、標高1,700m近い場所の風です。9月下旬でも風が吹けば体感は一桁になることがあるので、ウインドブレーカーは必ず持っていくこと。逆に下界の那須高原は日中まだ暖かいので、脱ぎ着できる格好が正解です。</p>
+  </article>
+
+  <section class="memo">
+    <h2>この5つを選ぶときに</h2>
+    <ul>
+      <li><b>前回の5コースとの組み合わせ　</b>連休は5日あるので、二回出かけるなら方角を変えるのがおすすめ。たとえば<b>近場の奥多摩と、遠出の那須</b>のように、疲れ方の違う日を組むと連休全体が楽になります。</li>
+      <li><b>天気で入れ替える　</b>雨予報なら、屋外中心の茶臼岳や鋸山より、<b>勝沼か伊香保</b>のほうが崩れにくい。ぶどう狩りは屋根のある園も多く、温泉は雨でも成立します。</li>
+      <li><b>富士山を見たい日は朝勝負　</b>河口湖コースだけは、出発時刻がそのまま満足度に直結します。前夜に準備を済ませて、6時には家を出られる日にあてること。</li>
+      <li><b>まだストックはあります　</b>今回入れなかった候補として、箱根（芦ノ湖と大涌谷）、銚子・犬吠埼（屏風ヶ浦と朝日）、日光の東照宮側などがあります。行きたくなったら組み直します。</li>
+      <li><b>積んでおくもの　</b>羽織もの、スニーカー、モバイルバッテリー、温泉に行く日はタオルとビニール袋、ぶどう狩りの日は保冷バッグ。</li>
+    </ul>
+  </section>
+
+  <p class="fine">掲載の所要時間・費用・営業条件は2026年9月時点のおおよその目安です。<br>料金や運行・開園の状況、予約の要否は、出発前に各施設の公式情報でご確認ください。</p>
+
+</div>
+</body>
+</html>
