@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SILVER WEEK 2026 — 和純と香子で楽しむシルバーウィーク！</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0E0E10;--paper:#FAF8F4;--ink:#141416;--mute:#6B6B70;--line:rgba(20,20,22,.14);
+--bebas:"Bebas Neue","Impact",sans-serif;--mincho:"Shippori Mincho B1","Hiragino Mincho ProN",serif;--goth:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;--ac:#E0392B}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--goth);line-height:1.9;letter-spacing:.02em;overflow-x:hidden}
+a{color:inherit}
+img{display:block}
+.prog{position:fixed;top:0;left:0;height:4px;width:0;background:var(--ac);z-index:50;transition:background .4s}
+/* cover */
+.cover{position:relative;height:100svh;min-height:560px;background:var(--bg);color:#fff;overflow:hidden;display:flex;align-items:flex-end}
+.cover__img{position:absolute;inset:-12% 0 0 0;width:100%;height:112%;object-fit:cover;opacity:.78;will-change:transform}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,16,.15) 0%,rgba(14,14,16,.05) 40%,rgba(14,14,16,.85) 100%)}
+.cover__in{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:0 6vw 7vh}
+.cover__eyebrow{font-family:var(--bebas);font-size:clamp(14px,1.6vw,20px);letter-spacing:.28em;opacity:.85;margin:0 0 10px;animation:up .9s .2s both}
+.cover__big{font-family:var(--bebas);font-size:clamp(84px,19vw,260px);line-height:.86;margin:0;letter-spacing:.01em;animation:up 1s .35s both}
+.cover__big span{display:block;color:#F2A93B}
+.cover__jp{font-family:var(--mincho);font-weight:800;font-size:clamp(20px,3.4vw,38px);margin:18px 0 0;letter-spacing:.08em;animation:up 1s .55s both}
+.cover__meta{display:flex;gap:26px;flex-wrap:wrap;margin:18px 0 0;font-size:13px;letter-spacing:.16em;opacity:.85;animation:up 1s .7s both}
+.cover__meta b{font-family:var(--bebas);font-size:22px;letter-spacing:.06em;font-weight:400;margin-right:6px}
+.cover__tate{position:absolute;right:5vw;top:8vh;writing-mode:vertical-rl;font-family:var(--mincho);font-weight:800;font-size:clamp(16px,2vw,24px);letter-spacing:.3em;opacity:.9;border-left:1px solid rgba(255,255,255,.5);padding-left:10px;z-index:2;animation:up 1s .9s both}
+.scroll{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;font-family:var(--bebas);letter-spacing:.3em;font-size:12px;opacity:.7}
+.scroll::after{content:"";display:block;width:1px;height:38px;background:#fff;margin:6px auto 0;animation:drip 1.8s infinite}
+@keyframes up{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* ticker */
+.ticker{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;font-family:var(--bebas);font-size:22px;letter-spacing:.2em;padding:12px 0;border-bottom:4px solid #F2A93B}
+.ticker__in{display:inline-block;animation:tick 28s linear infinite}
+.ticker span{margin:0 34px}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* contents */
+.wrap{max-width:1200px;margin:0 auto;padding:0 6vw}
+.sec-h{display:flex;align-items:baseline;gap:18px;margin:72px 0 22px}
+.sec-h .en{font-family:var(--bebas);font-size:clamp(46px,7vw,84px);line-height:1;letter-spacing:.02em}
+.sec-h .jp{font-family:var(--mincho);font-weight:800;font-size:16px;letter-spacing:.2em;color:var(--mute)}
+.idx{border-top:2px solid var(--ink)}
+.idx a{display:grid;grid-template-columns:auto 1fr auto;gap:0 22px;align-items:center;padding:20px 8px;border-bottom:1px solid var(--line);text-decoration:none;position:relative;transition:background .35s,color .35s}
+.idx .no{font-family:var(--bebas);font-size:clamp(44px,6vw,72px);line-height:1;color:var(--ac)}
+.idx .nm{font-family:var(--mincho);font-weight:800;font-size:clamp(20px,2.6vw,30px);letter-spacing:.04em;line-height:1.35}
+.idx .en{font-family:var(--bebas);letter-spacing:.14em;font-size:14px;color:var(--mute);margin-top:2px}
+.idx .ds{font-size:13px;color:var(--mute);letter-spacing:.06em;white-space:nowrap}
+.idx .th{width:76px;height:76px;object-fit:cover;border-radius:50%;grid-row:1/3;grid-column:3;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.idx a:hover,.idx a:focus-visible{background:var(--ac);color:#fff}
+.idx a:hover .no,.idx a:hover .en,.idx a:hover .ds{color:#fff}
+.idx a:hover .th{transform:scale(1.18) rotate(-6deg)}
+/* feature */
+.feat{margin-top:96px}
+.hero{position:relative;height:78svh;min-height:480px;overflow:hidden;background:#000;color:#fff}
+.hero img{width:100%;height:100%;object-fit:cover;opacity:.9;transform:scale(1.06);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.hero.in img{transform:none}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.8))}
+.hero__in{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 6vw 5vh;max-width:1200px;margin:0 auto}
+.hero__no{font-family:var(--bebas);font-size:clamp(90px,16vw,200px);line-height:.8;color:var(--ac);-webkit-text-stroke:0;margin:0}
+.hero__en{font-family:var(--bebas);font-size:clamp(18px,2.4vw,28px);letter-spacing:.24em;margin:10px 0 6px;opacity:.9}
+.hero__t{font-family:var(--mincho);font-weight:800;font-size:clamp(26px,4.4vw,52px);line-height:1.3;margin:0;letter-spacing:.03em}
+.hero__k{margin:12px 0 0;font-size:14px;letter-spacing:.1em;opacity:.85}
+.bar{height:10px;background:var(--ac)}
+.feat__body{max-width:1200px;margin:0 auto;padding:40px 6vw 0}
+.lead{font-size:clamp(15px,1.5vw,17px);line-height:2.1;max-width:62ch;margin:0}
+.data{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:34px 0 10px;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.data div{padding:16px 6px;border-right:1px solid var(--line)}
+.data div:last-child{border-right:0}
+.data dt{font-family:var(--bebas);letter-spacing:.2em;font-size:13px;color:var(--ac)}
+.data dd{margin:4px 0 0;font-family:var(--mincho);font-weight:800;font-size:clamp(15px,1.7vw,20px);line-height:1.5}
+.cta{display:inline-flex;align-items:center;gap:10px;margin:22px 0 0;padding:12px 22px;background:var(--ac);color:#fff;text-decoration:none;font-weight:700;letter-spacing:.1em;font-size:13.5px;border-radius:999px;transition:transform .3s,box-shadow .3s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.cta::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+/* story */
+.story{list-style:none;margin:56px 0 0;padding:0;display:grid;gap:56px}
+.st{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.st:nth-child(even) .st__img{order:2}
+.st__img{overflow:hidden;position:relative;aspect-ratio:4/3;background:#eee}
+.st__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.st:hover .st__img img{transform:scale(1.05)}
+.st__time{position:absolute;left:14px;top:14px;background:var(--ac);color:#fff;font-family:var(--bebas);font-size:26px;letter-spacing:.08em;padding:4px 12px;line-height:1.2}
+.st__tx .t{font-family:var(--bebas);font-size:clamp(40px,5vw,64px);line-height:1;color:var(--ac);letter-spacing:.02em}
+.st__tx h3{font-family:var(--mincho);font-weight:800;font-size:clamp(22px,2.6vw,30px);margin:6px 0 10px;line-height:1.4;letter-spacing:.03em}
+.st__tx p{margin:0;font-size:15px;line-height:2;max-width:46ch}
+.pin{display:inline-block;margin:14px 0 0;font-size:12px;letter-spacing:.14em;font-weight:700;color:var(--ac);text-decoration:none;border-bottom:2px solid var(--ac);padding-bottom:2px}
+.st--noimg{grid-template-columns:1fr}
+.st--noimg .st__tx{padding:26px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+.tip{margin:64px 0 0;padding:28px 30px;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.tip::before{content:"EDITOR'S TIP";font-family:var(--bebas);font-size:80px;position:absolute;right:-6px;bottom:-26px;color:var(--ac);opacity:.35;letter-spacing:.06em}
+.tip b{display:block;font-family:var(--bebas);letter-spacing:.24em;font-size:14px;color:var(--ac);margin-bottom:8px}
+.tip p{margin:0;font-size:14.5px;line-height:2;position:relative;max-width:60ch}
+/* end */
+.end{margin-top:110px;background:var(--ink);color:#fff;padding:70px 6vw 80px}
+.end__in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:50px}
+.end .sec-h{margin:0 0 20px;color:#fff}.end .sec-h .jp{color:rgba(255,255,255,.6)}
+.end li{font-size:14px;line-height:1.95;margin-bottom:12px;color:rgba(255,255,255,.88)}
+.end li b{color:#F2A93B}
+.checklist{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+.checklist label{display:flex;gap:10px;align-items:baseline;cursor:pointer;font-size:14.5px}
+.checklist input{accent-color:#F2A93B;margin:0;transform:translateY(2px)}
+.checklist input:checked+span{opacity:.45;text-decoration:line-through}
+.reset{margin-top:14px;font:inherit;font-size:12px;background:none;color:rgba(255,255,255,.7);border:0;border-bottom:1px solid rgba(255,255,255,.4);padding:0;cursor:pointer;letter-spacing:.1em}
+.fine{max-width:1200px;margin:50px auto 0;font-size:11.5px;color:rgba(255,255,255,.5);line-height:1.8}
+.foot{font-family:var(--bebas);font-size:clamp(60px,14vw,200px);line-height:.85;letter-spacing:.02em;color:rgba(255,255,255,.08);margin:40px 0 0;text-align:center;user-select:none}
+/* chip */
+.chip{position:fixed;left:14px;bottom:14px;z-index:40;background:var(--ac);color:#fff;font-family:var(--bebas);letter-spacing:.14em;font-size:15px;padding:8px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;transform:translateY(12px);transition:.4s;text-decoration:none;pointer-events:none}
+.chip.on{opacity:1;transform:none;pointer-events:auto}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (max-width:760px){
+  .cover{min-height:100svh}.cover__tate{top:6vh;right:4vw}
+  .st{grid-template-columns:1fr;gap:16px}.st:nth-child(even) .st__img{order:0}
+  .data{grid-template-columns:1fr 1fr}.data div:nth-child(2){border-right:0}
+  .idx a{grid-template-columns:auto 1fr auto;gap:0 14px;padding:16px 4px}.idx .th{width:56px;height:56px}
+  .end__in{grid-template-columns:1fr;gap:36px}.checklist{grid-template-columns:1fr}
+  .hero{height:66svh}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}.hero img{transform:none}
+}
+.vol{display:flex;align-items:baseline;gap:14px;margin:34px 0 8px;font-family:var(--bebas);letter-spacing:.2em;font-size:22px}
+.vol small{font-family:var(--mincho);font-weight:800;font-size:13px;letter-spacing:.2em;color:var(--mute)}
+.vol::after{content:"";flex:1;height:1px;background:var(--line)}
+.idx+.vol{margin-top:44px}</style></head><body>
+<div class="prog"></div>
+<a class="chip" href="#contents"></a>
+<header class="cover">
+<img class="cover__img" src="images/nakaminato-04.jpg" alt="">
+<p class="cover__tate">和純と香子で楽しむシルバーウィーク！</p>
+<div class="cover__in">
+<p class="cover__eyebrow">TRAVEL ISSUE — DAY TRIPS FROM TOKYO</p>
+<h1 class="cover__big">SILVER<span>WEEK</span></h1>
+<p class="cover__jp">十の行き先、十の一日。</p>
+<div class="cover__meta"><span><b>2026</b>9.19 SAT — 9.23 WED</span><span><b>10</b>COURSES</span><span><b>1</b>DAY EACH</span></div>
+</div>
+<div class="scroll">SCROLL</div>
+</header>
+<div class="ticker"><div class="ticker__in"><span>SILVER WEEK 2026</span><span>10 DAY TRIPS FROM TOKYO</span><span>9.19 SAT → 9.23 WED</span><span>和純 & 香子</span><span>山・川・海・肉・湖・ぶどう</span><span>SILVER WEEK 2026</span><span>10 DAY TRIPS FROM TOKYO</span><span>9.19 SAT → 9.23 WED</span><span>和純 & 香子</span><span>山・川・海・肉・湖・ぶどう</span></div></div>
+<main>
+<div class="wrap" id="contents">
+<div class="sec-h"><span class="en">CONTENTS</span><span class="jp">目次　—　近い順に</span></div>
+<div class="vol">VOL.1<small>其の一</small></div>
+<nav class="idx rv"><a href="#okutama" style="--ac:#1F8A5B">
+<span class="no">01</span><span><span class="nm">川音でいちにち、多摩川をさかのぼる</span><span class="en">RIVER & RAVINE — OKUTAMA</span></span>
+<img class="th" src="images/okutama-03.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約80km／1時間30分</span></a><a href="#nagatoro" style="--ac:#2A6DD9">
+<span class="no">02</span><span><span class="nm">荒川を下って、岩畳に寝転ぶ</span><span class="en">DOWN THE ARAKAWA — NAGATORO / CHICHIBU</span></span>
+<img class="th" src="images/nagatoro-02.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約90km／1時間40分</span></a><a href="#gotemba" style="--ac:#E0392B">
+<span class="no">03</span><span><span class="nm">げんこつハンバーグを軸に、富士の裾野をまわる</span><span class="en">HAMBURG & MT.FUJI — GOTEMBA / MISHIMA</span></span>
+<img class="th" src="images/gotemba-02.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約100km／1時間40分</span></a><a href="#nakaminato" style="--ac:#F2A93B">
+<span class="no">04</span><span><span class="nm">朝いちの市場から、海の鳥居まで</span><span class="en">MARKET BY THE SEA — NAKAMINATO / OARAI</span></span>
+<img class="th" src="images/nakaminato-03.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約120km／2時間</span></a><a href="#nikko" style="--ac:#7A3E9D">
+<span class="no">05</span><span><span class="nm">いろは坂をのぼって、標高1,300mの秋へ</span><span class="en">EARLY AUTUMN AT 1,300M — OKU-NIKKO</span></span>
+<img class="th" src="images/nikko-06.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約160km／2時間30分</span></a></nav>
+<div class="vol">VOL.2<small>其の二</small></div>
+<nav class="idx rv"><a href="#nokogiri" style="--ac:#0E8C93">
+<span class="no">06</span><span><span class="nm">海の上を走って、断崖から東京湾をのぞく</span><span class="en">CLIFF OVER THE BAY — BOSO / NOKOGIRIYAMA</span></span>
+<img class="th" src="images/nokogiri-03.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約100km／1時間20分</span></a><a href="#katsunuma" style="--ac:#B0296B">
+<span class="no">07</span><span><span class="nm">ぶどうをもいで、渓谷を歩いて、夜景の湯へ</span><span class="en">GRAPES & GORGE — KATSUNUMA / SHOSENKYO</span></span>
+<img class="th" src="images/katsunuma-02.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約100km／1時間30分</span></a><a href="#kawaguchiko" style="--ac:#3D3FA8">
+<span class="no">08</span><span><span class="nm">一日じゅう、富士山が正面にいる</span><span class="en">FACE TO FACE WITH FUJI — KAWAGUCHIKO / FUJIYOSHIDA</span></span>
+<img class="th" src="images/kawaguchiko-01.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約110km／1時間50分</span></a><a href="#ikaho" style="--ac:#8B5A2B">
+<span class="no">09</span><span><span class="nm">榛名湖から石段街へ、坂を下りていく一日</span><span class="en">LAKE, SHRINE & STONE STEPS — HARUNA / IKAHO</span></span>
+<img class="th" src="images/ikaho-01.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約130km／1時間50分</span></a><a href="#nasu" style="--ac:#5B7F2A">
+<span class="no">10</span><span><span class="nm">日本でいちばん早い秋を、先に見に行く</span><span class="en">FIRST LEAVES OF AUTUMN — NASU KOGEN</span></span>
+<img class="th" src="images/nasu-01.jpg" alt="" loading="lazy">
+<span class="ds" style="grid-column:2">片道 約180km／2時間30分</span></a></nav>
+</div>
+<section class="feat" id="okutama" data-ac="#1F8A5B" data-no="01" data-name="川音でいちにち、多摩川をさかのぼる" style="--ac:#1F8A5B">
+<div class="hero"><img src="images/okutama-03.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">01</p><p class="hero__en">RIVER & RAVINE / OKUTAMA</p><h2 class="hero__t">川音でいちにち、多摩川をさかのぼる</h2><p class="hero__k">都心から2時間、水が透ける渓谷へ　—　圏央道 青梅IC ／ 青梅街道</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">都心から2時間かからずに、水が透けて見える渓谷に着いてしまう贅沢なコース。歩く距離は自分たちで決められて、疲れたらすぐ車に戻れます。5連休の中でも渋滞リスクがいちばん低い行き先です。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約170km</dd></div><div><dt>費用の目安</dt><dd>二人で 1万円前後</dd></div><div><dt>歩く量</dt><dd>のんびり 5,000歩</dd></div><div><dt>混み具合</dt><dd>ゆるやか</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E6%BE%A4%E4%B9%83%E4%BA%95%E5%9C%92&waypoints=%E5%BE%A1%E5%B2%B3%E6%B8%93%E8%B0%B7%7C%E9%B3%A9%E3%83%8E%E5%B7%A3%E6%B8%93%E8%B0%B7%7C%E9%BA%A6%E5%B1%B1%E6%B5%AE%E6%A9%8B%7C%E6%97%A5%E5%8E%9F%E9%8D%BE%E4%B9%B3%E6%B4%9E" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">7:30</div><h3>出発</h3><p>圏央道で青梅ICへ。コンビニの朝ごはんは買わずに、渓谷のベンチまで我慢するのがおすすめ。</p></div></li><li class="st rv"><div class="st__img"><img src="images/okutama-01.jpg" alt="多摩川沿いに整備された御岳渓谷遊歩道" loading="lazy"><span class="st__time">9:00</span></div>
+<div class="st__tx"><div class="t">9:00</div><h3>御岳渓谷遊歩道</h3><p>多摩川の両岸に約4kmの遊歩道。カヌーの練習をしている人を眺めながら片道30分ほど歩けば、朝の空気で目が覚めます。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E5%BE%A1%E5%B2%B3%E6%B8%93%E8%B0%B7" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/okutama-02.jpg" alt="鳩ノ巣渓谷の吊り橋から見下ろす淵" loading="lazy"><span class="st__time">10:30</span></div>
+<div class="st__tx"><div class="t">10:30</div><h3>鳩ノ巣渓谷</h3><p>吊り橋から見下ろす淵の色がきれい。駐車場が小さいので、埋まっていたら無理せず先へ。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%B3%A9%E3%83%8E%E5%B7%A3%E6%B8%93%E8%B0%B7" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/okutama-03.jpg" alt="山あいに広がる奥多摩湖と、湖面にかかる麦山の浮橋" loading="lazy"><span class="st__time">11:30</span></div>
+<div class="st__tx"><div class="t">11:30</div><h3>奥多摩湖・麦山の浮橋</h3><p>通称ドラム缶橋。湖面に浮かぶ橋を渡ると足元がわずかに揺れます。水位によって通行止めになることがあるので、着いてから判断を。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%BA%A6%E5%B1%B1%E6%B5%AE%E6%A9%8B" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/okutama-04.jpg" alt="卵をのせた温かい蕎麦" loading="lazy"><span class="st__time">12:30</span></div>
+<div class="st__tx"><div class="t">12:30</div><h3>昼ごはん</h3><p>奥多摩駅周辺の蕎麦か、湖畔の食堂で。連休は昼のピークが読めないので、早めか遅めにずらすのが安全。</p></div></li><li class="st rv"><div class="st__img"><img src="images/okutama-05.jpg" alt="色とりどりの照明に浮かぶ日原鍾乳洞の内部" loading="lazy"><span class="st__time">14:00</span></div>
+<div class="st__tx"><div class="t">14:00</div><h3>日原鍾乳洞</h3><p>中は年間を通して11度前後。半袖だと本気で寒いので、薄手の上着を車に積んでおきます。細い一本道なので、対向車のすれ違いは慎重に。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%8E%9F%E9%8D%BE%E4%B9%B3%E6%B4%9E" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/okutama-06.jpg" alt="紅葉に囲まれた澤乃井園の庭園と休憩スペース" loading="lazy"><span class="st__time">16:00</span></div>
+<div class="st__tx"><div class="t">16:00</div><h3>澤乃井園（小澤酒造）</h3><p>多摩川に張り出した休憩所で、和菓子とお茶。運転する側はもちろん飲めないので、日本酒はお土産にして家で開ける方向で。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%BE%A4%E4%B9%83%E4%BA%95%E5%9C%92" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">17:30</div><h3>帰路</h3><p>青梅街道は夕方に流れが悪くなります。急がず、途中で夕飯を食べてから帰るくらいの気持ちで。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>山道の運転が続くので、ガソリンは奥多摩に入る前に入れておくこと。奥多摩湖から先はスタンドがぐっと減ります。</p></div>
+</div></section><section class="feat" id="nagatoro" data-ac="#2A6DD9" data-no="02" data-name="荒川を下って、岩畳に寝転ぶ" style="--ac:#2A6DD9">
+<div class="hero"><img src="images/nagatoro-02.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">02</p><p class="hero__en">DOWN THE ARAKAWA / NAGATORO / CHICHIBU</p><h2 class="hero__t">荒川を下って、岩畳に寝転ぶ</h2><p class="hero__k">舟に乗る。それだけで一日が決まる　—　関越道 花園IC ／ 国道140号</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">船に乗る予定がひとつ入るだけで、一日の骨格が決まります。午前にライン下り、午後は秩父の街か山へ、締めは温泉。二人で乗る舟は、写真より記憶に残るほうの体験です。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約190km</dd></div><div><dt>費用の目安</dt><dd>二人で 1.5〜2万円</dd></div><div><dt>歩く量</dt><dd>ほどほど 7,000歩</dd></div><div><dt>混み具合</dt><dd>午前がねらい目</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E8%A5%BF%E6%AD%A6%E7%A7%A9%E7%88%B6%E9%A7%85%E5%89%8D%E6%B8%A9%E6%B3%89%20%E7%A5%AD%E3%81%AE%E6%B9%AF&waypoints=%E9%95%B7%E7%80%9E%E3%83%A9%E3%82%A4%E3%83%B3%E4%B8%8B%E3%82%8A%7C%E9%95%B7%E7%80%9E%20%E5%B2%A9%E7%95%B3%7C%E7%A7%A9%E7%88%B6%E7%A5%9E%E7%A4%BE%7C%E7%A7%A9%E7%88%B6%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BA%E3%83%91%E3%83%BC%E3%82%AF%20%E6%97%85%E7%AB%8B%E3%81%A1%E3%81%AE%E4%B8%98" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">7:00</div><h3>出発</h3><p>関越道の下りは連休初日の朝がいちばん重いので、6時台に乗ってしまえるとかなり違います。</p></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">8:40</div><h3>長瀞に到着、受付</h3><p>ライン下りは当日受付が基本。着いたらまず舟の時間を押さえて、それから朝ごはんを探すのが正解です。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nagatoro-02.jpg" alt="荒川の岩場を進む長瀞ライン下りの舟" loading="lazy"><span class="st__time">9:30</span></div>
+<div class="st__tx"><div class="t">9:30</div><h3>長瀞ライン下り</h3><p>船頭さんの竿さばきで岩の間を抜けていく約1時間。9月下旬の川風は思ったより涼しいので、羽織るものを持って乗船を。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E7%80%9E%E3%83%A9%E3%82%A4%E3%83%B3%E4%B8%8B%E3%82%8A" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nagatoro-03.jpg" alt="荒川沿いに広がる長瀞の岩畳と、行き交う舟" loading="lazy"><span class="st__time">11:00</span></div>
+<div class="st__tx"><div class="t">11:00</div><h3>岩畳を歩く</h3><p>川沿いに広がる巨大な岩の段。座って川を眺めているだけで時間が溶けます。足元が濡れていると滑るのでスニーカーで。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E7%80%9E%20%E5%B2%A9%E7%95%B3" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nagatoro-04.jpg" alt="天然氷を使った色鮮やかなかき氷" loading="lazy"><span class="st__time">12:00</span></div>
+<div class="st__tx"><div class="t">12:00</div><h3>天然氷のかき氷</h3><p>長瀞は天然氷のかき氷が名物。人気店は待ちが長いので、行列を見て無理そうなら潔く諦めて次へ。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nagatoro-05.jpg" alt="刺身と山菜を添えた秩父の蕎麦膳" loading="lazy"><span class="st__time">13:00</span></div>
+<div class="st__tx"><div class="t">13:00</div><h3>秩父市街でおそい昼</h3><p>わらじカツ丼か、秩父そば。秩父神社に寄って、番場通りの古い建物を眺めながら歩くのも気持ちいい時間です。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E7%A7%A9%E7%88%B6%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nagatoro-06.jpg" alt="秩父ミューズパークの旅立ちの丘から見渡す盆地の景色" loading="lazy"><span class="st__time">15:00</span></div>
+<div class="st__tx"><div class="t">15:00</div><h3>秩父ミューズパーク（旅立ちの丘）</h3><p>盆地を見下ろす展望台。もう一段のぼりたい気分なら、三峯神社まで山道を1時間という選択もあります（帰りが遅くなる覚悟で）。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E7%A7%A9%E7%88%B6%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BA%E3%83%91%E3%83%BC%E3%82%AF%20%E6%97%85%E7%AB%8B%E3%81%A1%E3%81%AE%E4%B8%98" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nagatoro-07.jpg" alt="西武秩父駅前の温泉施設の露天風呂と山並み" loading="lazy"><span class="st__time">16:30</span></div>
+<div class="st__tx"><div class="t">16:30</div><h3>温泉でしめる</h3><p>西武秩父駅前の日帰り温泉なら、そのまま夕飯まで済ませられます。汗を流してから帰ると、渋滞もそこまで苦になりません。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E6%AD%A6%E7%A7%A9%E7%88%B6%E9%A7%85%E5%89%8D%E6%B8%A9%E6%B3%89%20%E7%A5%AD%E3%81%AE%E6%B9%AF" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">18:30</div><h3>帰路</h3><p>花園ICから関越で東京方面へ。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>ライン下りは増水すると運休や区間短縮になります。前日と当日朝に運航状況を確認して、だめだった場合の代案（宝登山ロープウェイなど）を頭に置いておくと慌てません。</p></div>
+</div></section><section class="feat" id="gotemba" data-ac="#E0392B" data-no="03" data-name="げんこつハンバーグを軸に、富士の裾野をまわる" style="--ac:#E0392B">
+<div class="hero"><img src="images/gotemba-02.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">03</p><p class="hero__en">HAMBURG & MT.FUJI / GOTEMBA / MISHIMA</p><h2 class="hero__t">げんこつハンバーグを軸に、富士の裾野をまわる</h2><p class="hero__k">待ち時間を観光に変える、肉の一日　—　東名 御殿場IC ／ 新東名 長泉沼津IC</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">さわやかは予約ができません。だからこの一日は「受付を取る」ことから始めて、順番を待つ時間を観光に変えてしまう組み立てにします。肉が主役でも、まわりの景色は水と橋と富士山です。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約210km</dd></div><div><dt>費用の目安</dt><dd>二人で 2万円前後</dd></div><div><dt>歩く量</dt><dd>ほどほど 6,000歩</dd></div><div><dt>混み具合</dt><dd>覚悟が必要</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E6%B2%BC%E6%B4%A5%E6%B8%AF&waypoints=%E3%81%95%E3%82%8F%E3%82%84%E3%81%8B%20%E5%BE%A1%E6%AE%BF%E5%A0%B4%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E5%BA%97%7C%E7%A7%A9%E7%88%B6%E5%AE%AE%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92%7C%E4%B8%89%E5%B3%B6%E3%82%B9%E3%82%AB%E3%82%A4%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%7C%E6%9F%BF%E7%94%B0%E5%B7%9D%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">6:30</div><h3>出発</h3><p>東名の下りは朝が勝負。海老名を過ぎるまでに流れておきたいところです。</p></div></li><li class="st rv"><div class="st__img"><img src="images/gotemba-01.jpg" alt="富士山を背にした、さわやか御殿場インター店の外観" loading="lazy"><span class="st__time">8:30</span></div>
+<div class="st__tx"><div class="t">8:30</div><h3>御殿場に到着</h3><p>御殿場インター店はスマホからの受付発券が9時開始。到着したらまず受付、それから動き出します。連休は数時間待ちが当たり前なので、待ち時間ありきで一日を設計するのが唯一の攻略法です。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%82%8F%E3%82%84%E3%81%8B%20%E5%BE%A1%E6%AE%BF%E5%A0%B4%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E5%BA%97" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/gotemba-02.jpg" alt="乙女峠から望む富士山と麓の街並み" loading="lazy"><span class="st__time">9:30</span></div>
+<div class="st__tx"><div class="t">9:30</div><h3>秩父宮記念公園、または乙女峠</h3><p>順番が来るまでの散歩。晴れていれば富士山がかなり近くに見えます。呼び出しに備えて、店から30分以上離れないのが鉄則。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E7%A7%A9%E7%88%B6%E5%AE%AE%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/gotemba-03.jpg" alt="鉄板の上で焼き上がったげんこつハンバーグ" loading="lazy"><span class="st__time">11:30</span></div>
+<div class="st__tx"><div class="t">11:30</div><h3>さわやか（げんこつハンバーグ）</h3><p>牛肉100％の丸いハンバーグを、目の前で半分に切って鉄板で仕上げてくれます。ソースはオニオンとデミの二択。白いごはんとの相性がいいので、パンよりライスがおすすめ。</p></div></li><li class="st rv"><div class="st__img"><img src="images/gotemba-04.jpg" alt="三島スカイウォークの展望台から見える雪化粧の富士山" loading="lazy"><span class="st__time">13:30</span></div>
+<div class="st__tx"><div class="t">13:30</div><h3>三島スカイウォーク</h3><p>全長400mの歩行者専用吊り橋。渡っている最中は思ったより揺れます。橋の先には森のアクティビティやカフェもあり、そのまま2時間ほど過ごせます。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E5%B3%B6%E3%82%B9%E3%82%AB%E3%82%A4%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/gotemba-05.jpg" alt="柿田川湧水公園の展望デッキから見下ろす青く澄んだ湧き間" loading="lazy"><span class="st__time">15:30</span></div>
+<div class="st__tx"><div class="t">15:30</div><h3>柿田川湧水公園</h3><p>富士山に降った水が地面から湧き出している場所。展望台から覗き込むと、青い井戸のような湧き間が見えます。入園無料で、滞在は40分ほど。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%9F%BF%E7%94%B0%E5%B7%9D%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/gotemba-06.jpg" alt="沼津港の入口に立つ大きな提灯門" loading="lazy"><span class="st__time">16:30</span></div>
+<div class="st__tx"><div class="t">16:30</div><h3>沼津港でお土産</h3><p>干物や海産物を買って車へ。もう少し歩ける体力があれば、深海水族館という手も。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%BC%E6%B4%A5%E6%B8%AF" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">17:30</div><h3>帰路</h3><p>東名の上りは夕方から確実に混みます。18時台に突っ込むより、沼津で早めの軽い夕飯を挟んで19時以降に走り出すほうが、結果的に早く帰れることが多いです。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>受付は前日には取れません。当日、受付開始の時刻ちょうどにスマホを触れる状態にしておくこと。御殿場プレミアム・アウトレット店とインター店は別受付なので、狙いをどちらかに決めてから向かいます。</p></div>
+</div></section><section class="feat" id="nakaminato" data-ac="#F2A93B" data-no="04" data-name="朝いちの市場から、海の鳥居まで" style="--ac:#F2A93B">
+<div class="hero"><img src="images/nakaminato-03.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">04</p><p class="hero__en">MARKET BY THE SEA / NAKAMINATO / OARAI</p><h2 class="hero__t">朝いちの市場から、海の鳥居まで</h2><p class="hero__k">朝いちの市場から、海の鳥居まで　—　常磐道 ひたち海浜公園IC ／ 北関東道</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">那珂湊は「早く着いた人が勝つ」場所です。開場と同時に入って海鮮を食べてしまえば、そのあとの一日がまるごと自由になります。9月は春のネモフィラ期のような大混雑がなく、海沿いを気持ちよく流せる時期。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約250km</dd></div><div><dt>費用の目安</dt><dd>二人で 1.5〜2万円</dd></div><div><dt>歩く量</dt><dd>しっかり 9,000歩</dd></div><div><dt>混み具合</dt><dd>朝だけ本気を出す</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%A4%A7%E6%B4%97%E6%B0%B4%E6%97%8F%E9%A4%A8&waypoints=%E9%82%A3%E7%8F%82%E6%B9%8A%E3%81%8A%E3%81%95%E3%81%8B%E3%81%AA%E5%B8%82%E5%A0%B4%7C%E5%9B%BD%E5%96%B6%E3%81%B2%E3%81%9F%E3%81%A1%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92%7C%E5%A4%A7%E6%B4%97%E7%A3%AF%E5%89%8D%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">6:20</div><h3>出発</h3><p>常磐道で北へ。三郷から先は比較的流れます。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nakaminato-01.jpg" alt="那珂湊おさかな市場の看板と、朝から賑わう通り" loading="lazy"><span class="st__time">8:30</span></div>
+<div class="st__tx"><div class="t">8:30</div><h3>那珂湊おさかな市場</h3><p>土日祝は8時半ごろから動き出します。この時間なら市場前の駐車場にすんなり入れる可能性が高い。回転寿司も浜焼きも、開店直後がいちばん静かです。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E7%8F%82%E6%B9%8A%E3%81%8A%E3%81%95%E3%81%8B%E3%81%AA%E5%B8%82%E5%A0%B4" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nakaminato-02.jpg" alt="市場寿しの店先と、色とりどりの新鮮なにぎり寿司" loading="lazy"><span class="st__time">10:30</span></div>
+<div class="st__tx"><div class="t">10:30</div><h3>市場をひやかす</h3><p>その場で食べる以外に、氷詰めにして持ち帰るという楽しみ方も。保冷バッグを積んでいくと選択肢が広がります。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nakaminato-03.jpg" alt="国営ひたち海浜公園、みはらしの丘に広がる緑のコキア" loading="lazy"><span class="st__time">11:15</span></div>
+<div class="st__tx"><div class="t">11:15</div><h3>国営ひたち海浜公園</h3><p>みはらしの丘のコキアは、この時期はまだ緑から色づき始めのころ。丸い株が一面に並ぶ光景は紅葉期とは別物で、しかも人が少ない。園内は広いのでレンタサイクルが快適です。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E5%9B%BD%E5%96%B6%E3%81%B2%E3%81%9F%E3%81%A1%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nakaminato-04.jpg" alt="岩礁の上に立つ大洗磯前神社の神磯の鳥居" loading="lazy"><span class="st__time">14:00</span></div>
+<div class="st__tx"><div class="t">14:00</div><h3>大洗磯前神社・神磯の鳥居</h3><p>岩礁の上に立つ鳥居に波がぶつかります。海岸沿いの道からも見えますが、参道の階段を上がって振り返る景色のほうが記憶に残るはず。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%B4%97%E7%A3%AF%E5%89%8D%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nakaminato-05.jpg" alt="大きな明太子のオブジェが目を引くめんたいパークの外観" loading="lazy"><span class="st__time">15:30</span></div>
+<div class="st__tx"><div class="t">15:30</div><h3>アクアワールド大洗、またはめんたいパーク</h3><p>まだ歩けるなら水族館（サメの種類が国内有数）、疲れていたら明太子の直売所で軽く済ませて海を見る、の二択で。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%A4%A7%E6%B4%97%E6%B0%B4%E6%97%8F%E9%A4%A8" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">17:00</div><h3>帰路</h3><p>常磐道の上りは夕方に柏あたりで詰まります。守谷SAで一息入れて時間をずらすのが定番の逃げ方。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>市場の駐車場は正面が有料、繁忙日は近くの卸売市場敷地が無料の臨時駐車場として開くことがあります（開門は10時ごろで、15時には出さないといけないタイプ）。朝いちで行くなら正面に停めてしまうのがいちばん簡単です。</p></div>
+</div></section><section class="feat" id="nikko" data-ac="#7A3E9D" data-no="05" data-name="いろは坂をのぼって、標高1,300mの秋へ" style="--ac:#7A3E9D">
+<div class="hero"><img src="images/nikko-06.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">05</p><p class="hero__en">EARLY AUTUMN AT 1,300M / OKU-NIKKO</p><h2 class="hero__t">いろは坂をのぼって、標高1,300mの秋へ</h2><p class="hero__k">いちばん遠くて、いちばん景色が大きい　—　東北道 宇都宮IC ／ 日光宇都宮道路</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">5つの中でいちばん遠く、いちばん朝が早い。その代わり、滝と湖と湿原が半日で全部出てきます。9月下旬の奥日光はもう秋のはじまりで、朝は10度台まで下がることも。上着は必ず積んでください。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約330km</dd></div><div><dt>費用の目安</dt><dd>二人で 2〜2.5万円</dd></div><div><dt>歩く量</dt><dd>たっぷり 12,000歩</dd></div><div><dt>混み具合</dt><dd>いろは坂しだい</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E8%B5%A4%E6%B2%BC%E9%A7%90%E8%BB%8A%E5%A0%B4%20%E6%88%A6%E5%A0%B4%E3%83%B6%E5%8E%9F&waypoints=%E6%98%8E%E6%99%BA%E5%B9%B3%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%7C%E8%8F%AF%E5%8E%B3%E3%81%AE%E6%BB%9D%7C%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E5%A4%A7%E4%BD%BF%E9%A4%A8%E5%88%A5%E8%8D%98%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92%7C%E7%AB%9C%E9%A0%AD%E3%81%AE%E6%BB%9D" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">5:30</div><h3>出発</h3><p>この日だけは早起きが必須。いろは坂は昼前から詰まり始めるので、8時台に上がりきってしまうのが理想です。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nikko-01.jpg" alt="山の斜面を上る明智平ロープウェイのゴンドラと駅" loading="lazy"><span class="st__time">8:15</span></div>
+<div class="st__tx"><div class="t">8:15</div><h3>明智平ロープウェイ</h3><p>第二いろは坂の途中にある展望台へ。中禅寺湖と華厳ノ滝を同じ画面で見下ろせる場所は、ここだけです。駐車場が小さいので早い時間に。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E6%99%BA%E5%B9%B3%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nikko-02.jpg" alt="正面から見上げる華厳ノ滝の落差" loading="lazy"><span class="st__time">9:30</span></div>
+<div class="st__tx"><div class="t">9:30</div><h3>華厳ノ滝</h3><p>エレベーターで一気に下って、正面から落差97mを見上げます。水しぶきで空気がひんやりするので、上着があると快適。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E8%8F%AF%E5%8E%B3%E3%81%AE%E6%BB%9D" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nikko-03.jpg" alt="中禅寺湖の湖畔を歩く人と、静かな湖面" loading="lazy"><span class="st__time">11:00</span></div>
+<div class="st__tx"><div class="t">11:00</div><h3>中禅寺湖畔</h3><p>イタリア大使館別荘記念公園まで湖岸を歩くと、湖に向かって開いた縁側のような建物にたどり着きます。畳に座って湖を眺める時間がこの日のハイライト。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E5%A4%A7%E4%BD%BF%E9%A4%A8%E5%88%A5%E8%8D%98%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nikko-04.jpg" alt="湯波を使った日光の料理の数々" loading="lazy"><span class="st__time">12:30</span></div>
+<div class="st__tx"><div class="t">12:30</div><h3>昼ごはん</h3><p>湯波（ゆば）料理か、湖畔のカフェで軽く。日光の湯波は京都のものより厚くて食べごたえがあります。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nikko-05.jpg" alt="岩を二股に分けて流れ落ちる竜頭の滝" loading="lazy"><span class="st__time">13:45</span></div>
+<div class="st__tx"><div class="t">13:45</div><h3>竜頭の滝</h3><p>岩を二股に分けて流れ落ちる滝。滝壺の茶屋から見る構図が有名です。周囲の木が少し色づき始めている頃。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E7%AB%9C%E9%A0%AD%E3%81%AE%E6%BB%9D" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nikko-06.jpg" alt="男体山を望む戦場ヶ原の木道" loading="lazy"><span class="st__time">14:30</span></div>
+<div class="st__tx"><div class="t">14:30</div><h3>戦場ヶ原ハイキング</h3><p>赤沼から湿原の木道へ。往復1時間ほどでも十分に開けた景色が楽しめます。時間と体力があれば湯滝まで抜けるコースも。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E8%B5%A4%E6%B2%BC%E9%A7%90%E8%BB%8A%E5%A0%B4%20%E6%88%A6%E5%A0%B4%E3%83%B6%E5%8E%9F" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">16:00</div><h3>下山、帰路</h3><p>下りのいろは坂は一方通行なので流れは比較的スムーズ。東照宮まで足を伸ばすと確実に時間が足りないので、そこは次の機会に取っておきます。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>いろは坂は上りと下りで別の道です。上り（第二いろは坂）の渋滞を避けられるかどうかで一日の質が変わるので、出発を1時間早めるのがいちばん効く投資になります。</p></div>
+</div></section><section class="feat" id="nokogiri" data-ac="#0E8C93" data-no="06" data-name="海の上を走って、断崖から東京湾をのぞく" style="--ac:#0E8C93">
+<div class="hero"><img src="images/nokogiri-03.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">06</p><p class="hero__en">CLIFF OVER THE BAY / BOSO / NOKOGIRIYAMA</p><h2 class="hero__t">海の上を走って、断崖から東京湾をのぞく</h2><p class="hero__k">海の上を走って、断崖から東京湾をのぞく　—　アクアライン ／ 富津館山道路 富津金谷IC</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">道そのものが観光になる珍しいコース。アクアラインで海の真ん中に降り立ち、そのまま房総へ渡って、石を切り出した跡の絶壁に立ちます。海鮮はアジ。那珂湊とはまったく違う味の海です。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約210km</dd></div><div><dt>費用の目安</dt><dd>二人で 1.5万円前後</dd></div><div><dt>歩く量</dt><dd>階段が多め 9,000歩</dd></div><div><dt>混み具合</dt><dd>10時からが本番</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E3%83%9E%E3%82%B6%E3%83%BC%E7%89%A7%E5%A0%B4&waypoints=%E6%B5%B7%E3%81%BB%E3%81%9F%E3%82%8B%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%A8%E3%83%AA%E3%82%A2%7C%E9%8B%B8%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%83%BC%7C%E9%8B%B8%E5%B1%B1%20%E6%97%A5%E6%9C%AC%E5%AF%BA%7C%E9%87%91%E8%B0%B7%E6%B8%AF%7C%E6%BF%83%E6%BA%9D%E3%81%AE%E6%BB%9D" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">6:30</div><h3>出発</h3><p>アクアラインへ。連休は上りも下りも昼前後が重くなるので、朝のうちに渡ってしまいます。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nokogiri-01.jpg" alt="海ほたるPAのデッキに置かれたイルカのオブジェと東京湾" loading="lazy"><span class="st__time">7:20</span></div>
+<div class="st__tx"><div class="t">7:20</div><h3>海ほたるPA</h3><p>海の真ん中のパーキング。デッキに出ると360度が海で、朝は風が気持ちいい。ここで朝ごはんを済ませておくと、あとが楽。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E3%81%BB%E3%81%9F%E3%82%8B%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%A8%E3%83%AA%E3%82%A2" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nokogiri-02.jpg" alt="緑の斜面を登る鋸山ロープウェーのゴンドラと、その先に広がる東京湾" loading="lazy"><span class="st__time">8:30</span></div>
+<div class="st__tx"><div class="t">8:30</div><h3>鋸山ロープウェー</h3><p>山麓駅から4分で標高329mの山頂へ。駐車場は500円ほど。土日祝は10時を過ぎると混み始めるので、この時間に着けているのが理想です。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%8B%B8%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%83%BC" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nokogiri-03.jpg" alt="崖から突き出た岩の上にある地獄のぞきの展望台" loading="lazy"><span class="st__time">9:00</span></div>
+<div class="st__tx"><div class="t">9:00</div><h3>日本寺・地獄のぞき</h3><p>拝観料は大人700円ほど。突き出た岩の先から100m下の石切場をのぞき込みます。混雑時は展望台の順番待ちが出ることも。近くの「ラピュタの壁」と呼ばれる垂直の絶壁もあわせて。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%8B%B8%E5%B1%B1%20%E6%97%A5%E6%9C%AC%E5%AF%BA" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nokogiri-04.jpg" alt="石切場の壁に彫られた高さ約30mの百尺観音" loading="lazy"><span class="st__time">10:30</span></div>
+<div class="st__tx"><div class="t">10:30</div><h3>百尺観音、そして下山</h3><p>大仏まで下りると、戻りに30〜40分の登り返しが待っています。体力と相談して、無理なら山頂側だけで切り上げるのが賢明。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nokogiri-05.jpg" alt="皿からはみ出す大きさのアジフライ定食" loading="lazy"><span class="st__time">11:30</span></div>
+<div class="st__tx"><div class="t">11:30</div><h3>金谷で昼ごはん</h3><p>港のすぐそばで、黄金アジのフライか海鮮丼。厚みのあるアジフライは房総の名物で、想像より一段大きいので二人で分けるくらいがちょうどいい量です。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%87%91%E8%B0%B7%E6%B8%AF" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nokogiri-06.jpg" alt="亀岩の洞窟に差し込む光と、水面に映る半円のかたち" loading="lazy"><span class="st__time">13:30</span></div>
+<div class="st__tx"><div class="t">13:30</div><h3>濃溝の滝・亀岩の洞窟</h3><p>洞窟の穴から差す光がハート形に見えるのは早朝の限られた時期だけ。日中はその写真は撮れませんが、苔と水音だけの静かな渓流散歩として十分きれいです。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%BF%83%E6%BA%9D%E3%81%AE%E6%BB%9D" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nokogiri-07.jpg" alt="マザー牧場の入口の看板と牛のオブジェ" loading="lazy"><span class="st__time">15:00</span></div>
+<div class="st__tx"><div class="t">15:00</div><h3>マザー牧場、または保田の直売所</h3><p>牧場で高台から東京湾を眺めるか、漁協の直売所で干物を買って帰るか。どちらを選ぶかで一日の後味が変わります。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%82%B6%E3%83%BC%E7%89%A7%E5%A0%B4" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">16:30</div><h3>帰路</h3><p>アクアラインの上りは夕方にかなり詰まります。海ほたるで夕景を見ながら1時間つぶすほうが、渋滞の中にいるより気分がいい。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>帰りを変化球にするなら、金谷から東京湾フェリーで久里浜へ渡る手があります。車ごと約40分の船旅で、そのまま横須賀・三浦経由の帰り道に。アクアラインの渋滞を丸ごと回避できて、船に乗ること自体がイベントになります。</p></div>
+</div></section><section class="feat" id="katsunuma" data-ac="#B0296B" data-no="07" data-name="ぶどうをもいで、渓谷を歩いて、夜景の湯へ" style="--ac:#B0296B">
+<div class="hero"><img src="images/katsunuma-02.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">07</p><p class="hero__en">GRAPES & GORGE / KATSUNUMA / SHOSENKYO</p><h2 class="hero__t">ぶどうをもいで、渓谷を歩いて、夜景の湯へ</h2><p class="hero__k">ぶどうが一年でいちばんおいしい週に　—　中央道 勝沼IC ／ 甲府昭和IC</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">この週末がぶどうの当たり日です。シャインマスカットも巨峰もピオーネも、9月下旬がちょうど最盛期。畑で食べてから渓谷を歩き、盆地を見下ろす露天風呂で終わる、味と景色の欲張りコース。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約220km</dd></div><div><dt>費用の目安</dt><dd>二人で 1.5〜2万円</dd></div><div><dt>歩く量</dt><dd>ほどほど 8,000歩</dd></div><div><dt>混み具合</dt><dd>小仏トンネルが山場</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E3%81%BB%E3%81%A3%E3%81%9F%E3%82%89%E3%81%8B%E3%81%97%E6%B8%A9%E6%B3%89&waypoints=%E5%8B%9D%E6%B2%BC%20%E3%81%B6%E3%81%A9%E3%81%86%E7%8B%A9%E3%82%8A%7C%E5%8B%9D%E6%B2%BC%20%E3%81%B6%E3%81%A9%E3%81%86%E3%81%AE%E4%B8%98%7C%E6%98%87%E4%BB%99%E5%B3%A1" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">6:30</div><h3>出発</h3><p>中央道の下りは小仏トンネル手前が詰まります。7時前に八王子を抜けられると、その後はずっと快適。</p></div></li><li class="st rv"><div class="st__img"><img src="images/katsunuma-01.jpg" alt="棚から下がる巨峰の房を手に取っているところ" loading="lazy"><span class="st__time">8:30</span></div>
+<div class="st__tx"><div class="t">8:30</div><h3>ぶどう狩り</h3><p>勝沼には30種類以上を育てている園もあります。9月下旬はシャインマスカットが最盛期で、巨峰やピオーネも並ぶ贅沢な時期。食べ放題の園もあれば、もぎ取って持ち帰る園もあるので、好みで選んで。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E5%8B%9D%E6%B2%BC%20%E3%81%B6%E3%81%A9%E3%81%86%E7%8B%A9%E3%82%8A" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/katsunuma-02.jpg" alt="丘の斜面いっぱいに広がる勝沼のぶどう畑と、その向こうの山並み" loading="lazy"><span class="st__time">10:30</span></div>
+<div class="st__tx"><div class="t">10:30</div><h3>ぶどうの丘</h3><p>丘の上から一面のぶどう畑を見渡せます。地下のワインカーヴでは試飲もできますが、運転する側は当然パス。気に入った1本を買って、家で開けるほうが楽しみが伸びます。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E5%8B%9D%E6%B2%BC%20%E3%81%B6%E3%81%A9%E3%81%86%E3%81%AE%E4%B8%98" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/katsunuma-03.jpg" alt="鉄鍋で供されるほうとうと、小鉢の甲州鳥もつ煮" loading="lazy"><span class="st__time">12:00</span></div>
+<div class="st__tx"><div class="t">12:00</div><h3>昼ごはん</h3><p>ほうとうか、甲州の鳥もつ煮。ほうとうは量が多いので、頼みすぎに注意です。</p></div></li><li class="st rv"><div class="st__img"><img src="images/katsunuma-04.jpg" alt="新緑の谷を抜けて流れ落ちる仙娥滝と、澄んだ滝壺" loading="lazy"><span class="st__time">13:30</span></div>
+<div class="st__tx"><div class="t">13:30</div><h3>昇仙峡</h3><p>甲府から北へ。切り立った覚円峰を見上げながら渓谷沿いを歩き、仙娥滝まで。紅葉本番は11月なので、9月はまだ人が少なくて歩きやすい時期です。滞在は2時間ほど。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%98%87%E4%BB%99%E5%B3%A1" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/katsunuma-05.jpg" alt="湯気の立つ露天風呂と、その先に広がる甲府盆地と富士山" loading="lazy"><span class="st__time">16:00</span></div>
+<div class="st__tx"><div class="t">16:00</div><h3>ほったらかし温泉</h3><p>甲府盆地をまるごと見下ろす露天風呂。日が落ちる時間に入れると、湯に浸かったまま街の明かりが一つずつ点いていくのが見えます。この日のためだけに行っても後悔しない場所。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E3%81%BB%E3%81%A3%E3%81%9F%E3%82%89%E3%81%8B%E3%81%97%E6%B8%A9%E6%B3%89" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">18:00</div><h3>帰路</h3><p>中央道の上りは相模湖から八王子で渋滞しがち。表示によっては圏央道まわりのほうが早いこともあるので、出る前にルートを比べておくこと。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>ぶどう狩りは園によって完全予約制のところと、当日ふらっと入れるところがあります。連休は前者が埋まりやすいので、行きたい園が決まっているなら数日前に電話を。土が柔らかいことがあるので、足元はスニーカーで。</p></div>
+</div></section><section class="feat" id="kawaguchiko" data-ac="#3D3FA8" data-no="08" data-name="一日じゅう、富士山が正面にいる" style="--ac:#3D3FA8">
+<div class="hero"><img src="images/kawaguchiko-01.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">08</p><p class="hero__en">FACE TO FACE WITH FUJI / KAWAGUCHIKO / FUJIYOSHIDA</p><h2 class="hero__t">一日じゅう、富士山が正面にいる</h2><p class="hero__k">一日じゅう、富士山が正面にいる　—　中央道 河口湖IC ／ 東富士五湖道路</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">御殿場が富士山の裾を横から見る一日なら、こちらは正面から向き合う一日。ただし午後は雲が出やすいので、いちばんの絶景を朝に置く構成にしています。写真を撮りたい日はこちらです。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約230km</dd></div><div><dt>費用の目安</dt><dd>二人で 1.5万円前後</dd></div><div><dt>歩く量</dt><dd>階段あり 9,000歩</dd></div><div><dt>混み具合</dt><dd>午前が勝負</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E9%81%93%E3%81%AE%E9%A7%85%E3%81%AA%E3%82%8B%E3%81%95%E3%82%8F&waypoints=%E6%96%B0%E5%80%89%E5%B1%B1%E6%B5%85%E9%96%93%E5%85%AC%E5%9C%92%7C%E5%AF%8C%E5%A3%AB%E5%B1%B1%E3%83%91%E3%83%8E%E3%83%A9%E3%83%9E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%7C%E6%B2%B3%E5%8F%A3%E6%B9%96%20%E5%A4%A7%E7%9F%B3%E5%85%AC%E5%9C%92%7C%E5%BF%8D%E9%87%8E%E5%85%AB%E6%B5%B7" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">6:00</div><h3>出発</h3><p>富士山が雲に隠れる前に着きたいので、この日はとにかく早出。中央道の小仏トンネルも同じ理由で早いほど有利です。</p></div></li><li class="st rv"><div class="st__img"><img src="images/kawaguchiko-01.jpg" alt="新倉山浅間公園の五重塔と、街並みの向こうに立つ富士山" loading="lazy"><span class="st__time">8:00</span></div>
+<div class="st__tx"><div class="t">8:00</div><h3>新倉山浅間公園</h3><p>五重塔と富士山を一枚に収められる展望デッキへ。398段の階段が待っていますが、登りきった先の眺めは階段の記憶を上書きしてくれます。息が上がるので水を持って。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%80%89%E5%B1%B1%E6%B5%85%E9%96%93%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/kawaguchiko-02.jpg" alt="天上山から見下ろす河口湖と、斜面を下るロープウェイのゴンドラ" loading="lazy"><span class="st__time">9:30</span></div>
+<div class="st__tx"><div class="t">9:30</div><h3>富士山パノラマロープウェイ</h3><p>河口湖畔から天上山の展望台へ3分ほど。眼下に湖、正面に富士山という構図で、歩かずに絶景が手に入る貴重な場所です。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E5%A3%AB%E5%B1%B1%E3%83%91%E3%83%8E%E3%83%A9%E3%83%9E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/kawaguchiko-03.jpg" alt="大石公園の緑のコキアと、河口湖の向こうに立つ富士山" loading="lazy"><span class="st__time">11:00</span></div>
+<div class="st__tx"><div class="t">11:00</div><h3>大石公園</h3><p>湖の北岸、花畑ごしに富士山が立つ定番スポット。この時期は丸いコキアが緑から色づき始めるころで、湖と山と丸い株が一列に並びます。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E5%8F%A3%E6%B9%96%20%E5%A4%A7%E7%9F%B3%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/kawaguchiko-04.jpg" alt="湯気の立つほうとうの鍋" loading="lazy"><span class="st__time">12:30</span></div>
+<div class="st__tx"><div class="t">12:30</div><h3>ほうとう</h3><p>かぼちゃの溶けた味噌のつゆに、平たい麺。歩いたあとの体に染みます。人気店は昼のピークに行列ができるので、11時台か13時台にずらすのも手。</p></div></li><li class="st rv"><div class="st__img"><img src="images/kawaguchiko-05.jpg" alt="底まで透けて見える忍野八海の湧水池と、茅葺きの建物" loading="lazy"><span class="st__time">14:00</span></div>
+<div class="st__tx"><div class="t">14:00</div><h3>忍野八海</h3><p>富士山の伏流水が湧く8つの池。水の透明度が異様に高く、底の水草がそのまま見えます。狭い集落に人が集中するので、駐車場は素直に有料のところへ。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E5%BF%8D%E9%87%8E%E5%85%AB%E6%B5%B7" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/kawaguchiko-06.jpg" alt="道の駅なるさわの広場と、正面にそびえる富士山" loading="lazy"><span class="st__time">15:30</span></div>
+<div class="st__tx"><div class="t">15:30</div><h3>道の駅なるさわ、または湖畔のカフェ</h3><p>お土産を買って、最後にもう一度富士山を眺めてから帰り支度。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%E3%81%AA%E3%82%8B%E3%81%95%E3%82%8F" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">16:30</div><h3>帰路</h3><p>中央道の上りは夕方に長く伸びます。焦らず、途中のPAで休みながら。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>富士山は午前中のほうが見える確率が高く、昼を過ぎると雲がかかりやすくなります。もし朝の時点で山が完全に隠れていたら、無理に展望スポットを回らず、忍野八海と食べ物に予定を寄せてしまうほうが満足度は高いはず。</p></div>
+</div></section><section class="feat" id="ikaho" data-ac="#8B5A2B" data-no="09" data-name="榛名湖から石段街へ、坂を下りていく一日" style="--ac:#8B5A2B">
+<div class="hero"><img src="images/ikaho-01.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">09</p><p class="hero__en">LAKE, SHRINE & STONE STEPS / HARUNA / IKAHO</p><h2 class="hero__t">榛名湖から石段街へ、坂を下りていく一日</h2><p class="hero__k">湖から石段街へ、坂を下りていく　—　関越道 渋川伊香保IC</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">朝は標高1,000mの湖、昼は杉並木の参道、夕方は温泉街の石段。山の上から順に下りてくるだけで一日がきれいに組み上がります。締めが温泉なので、帰りの車内が静かで穏やかになるコース。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約270km</dd></div><div><dt>費用の目安</dt><dd>二人で 1.5万円前後</dd></div><div><dt>歩く量</dt><dd>石段と参道 10,000歩</dd></div><div><dt>混み具合</dt><dd>おだやか</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E4%BC%8A%E9%A6%99%E4%BF%9D%E6%B8%A9%E6%B3%89%20%E7%9F%B3%E6%AE%B5%E3%81%AE%E6%B9%AF&waypoints=%E6%A6%9B%E5%90%8D%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%7C%E6%A6%9B%E5%90%8D%E7%A5%9E%E7%A4%BE%7C%E6%B0%B4%E6%B2%A2%E3%81%86%E3%81%A9%E3%82%93%E8%A1%97%E9%81%93%7C%E4%BC%8A%E9%A6%99%E4%BF%9D%E6%B8%A9%E6%B3%89%20%E7%9F%B3%E6%AE%B5%E8%A1%97" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">7:00</div><h3>出発</h3><p>関越道で渋川伊香保ICへ。そこから榛名山を一気に登ります。</p></div></li><li class="st rv"><div class="st__img"><img src="images/ikaho-01.jpg" alt="榛名湖に浮かぶ遊覧船と、正面にそびえる榛名富士" loading="lazy"><span class="st__time">8:40</span></div>
+<div class="st__tx"><div class="t">8:40</div><h3>榛名湖・榛名富士</h3><p>カルデラ湖と、その真ん中に立つ形のいい山。ロープウェイで榛名富士の山頂に上がると、関東平野の方まで見渡せます。朝の湖畔は空気が澄んでいて、9月下旬なら少し肌寒いくらい。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%A6%9B%E5%90%8D%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/ikaho-02.jpg" alt="杉に囲まれた榛名神社の社殿" loading="lazy"><span class="st__time">10:30</span></div>
+<div class="st__tx"><div class="t">10:30</div><h3>榛名神社</h3><p>参道の杉並木を15分ほど歩いて、巨大な岩に寄り添うように建つ社殿へ。渓流と奇岩と杉に囲まれた道は、それ自体が目的地になる気持ちよさです。往復1時間半を見ておくこと。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%A6%9B%E5%90%8D%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/ikaho-03.jpg" alt="ざるに盛られた白い水沢うどんと天ぷら" loading="lazy"><span class="st__time">12:30</span></div>
+<div class="st__tx"><div class="t">12:30</div><h3>水沢うどん</h3><p>讃岐、稲庭と並ぶと言われる群馬のうどん。冷たいざるで、まいたけの天ぷらを添えるのが定番の食べ方です。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%B0%B4%E6%B2%A2%E3%81%86%E3%81%A9%E3%82%93%E8%A1%97%E9%81%93" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/ikaho-04.jpg" alt="伊香保温泉の石段街と、手前のIKAHOのモニュメント" loading="lazy"><span class="st__time">14:00</span></div>
+<div class="st__tx"><div class="t">14:00</div><h3>伊香保 石段街</h3><p>365段の石段の両側に、射的や温泉まんじゅうの店が並びます。上の伊香保神社側の駐車場に停めて、下りながら歩くのが体力的に正解。焼きまんじゅうは食べ歩き向きです。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E9%A6%99%E4%BF%9D%E6%B8%A9%E6%B3%89%20%E7%9F%B3%E6%AE%B5%E8%A1%97" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/ikaho-05.jpg" alt="石段街にある共同浴場「石段の湯」の入口" loading="lazy"><span class="st__time">15:30</span></div>
+<div class="st__tx"><div class="t">15:30</div><h3>日帰り温泉</h3><p>石段街の途中の共同浴場か、少し上の露天風呂へ。茶色い「黄金の湯」が伊香保の顔で、湯上がりの体が長く温かいままです。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E9%A6%99%E4%BF%9D%E6%B8%A9%E6%B3%89%20%E7%9F%B3%E6%AE%B5%E3%81%AE%E6%B9%AF" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">17:00</div><h3>帰路</h3><p>関越の上りは高坂から先が混みやすいところ。時間が合えば途中で夕飯を挟んで、ピークを外して帰ります。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>榛名湖から伊香保へ下る道は、カーブが続くうえに勾配もそこそこあります。同乗する側が酔いやすいなら、この区間だけ窓を開けて、飛ばさずゆっくり下ること。</p></div>
+</div></section><section class="feat" id="nasu" data-ac="#5B7F2A" data-no="10" data-name="日本でいちばん早い秋を、先に見に行く" style="--ac:#5B7F2A">
+<div class="hero"><img src="images/nasu-01.jpg" alt="" loading="lazy">
+<div class="hero__in"><p class="hero__no">10</p><p class="hero__en">FIRST LEAVES OF AUTUMN / NASU KOGEN</p><h2 class="hero__t">日本でいちばん早い秋を、先に見に行く</h2><p class="hero__k">日本でいちばん早い秋を、先に見に行く　—　東北道 那須IC ／ 那須高原SIC</p></div></div>
+<div class="bar"></div>
+<div class="feat__body">
+<p class="lead rv">茶臼岳の紅葉は9月下旬から色づき始めます。ほとんどの人がまだ夏の格好をしている時期に、山の上だけ先に秋になっている。その時間差を見に行くのがこの一日の主題です。</p>
+<dl class="data rv"><div><dt>走行</dt><dd>往復 約360km</dd></div><div><dt>費用の目安</dt><dd>二人で 2〜2.5万円</dd></div><div><dt>歩く量</dt><dd>山道あり 11,000歩</dd></div><div><dt>混み具合</dt><dd>山頂の駐車場が鍵</dd></div></dl>
+<a class="cta rv" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E9%81%93%E3%81%AE%E9%A7%85%20%E9%82%A3%E9%A0%88%E9%AB%98%E5%8E%9F%E5%8F%8B%E6%84%9B%E3%81%AE%E6%A3%AE&waypoints=%E9%82%A3%E9%A0%88%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%7C%E6%AE%BA%E7%94%9F%E7%9F%B3%7C%E5%8D%97%E3%83%B6%E4%B8%98%E7%89%A7%E5%A0%B4%7C%E3%81%A4%E3%81%A4%E3%81%98%E5%90%8A%E6%A9%8B%20%E9%82%A3%E9%A0%88" target="_blank" rel="noopener">経路をひらく　GOOGLE MAPS</a>
+<ol class="story"><li class="st st--noimg rv"><div class="st__tx"><div class="t">5:30</div><h3>出発</h3><p>この日も早起きが必要。ロープウェイの駐車場は午前中の早い時間に埋まることがあり、そうなると下から順番待ちになります。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nasu-01.jpg" alt="色づき始めた斜面を下る那須ロープウェイと、眼下に広がる雲海" loading="lazy"><span class="st__time">8:00</span></div>
+<div class="st__tx"><div class="t">8:00</div><h3>那須ロープウェイ（茶臼岳）</h3><p>標高1,684mの山頂駅へ。そこから牛ヶ首方面へ歩けば、岩と噴煙と色づき始めた斜面が一度に見られます。強風で運休になることがあるので、当日朝の運行状況は必ず確認を。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E9%A0%88%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nasu-02.jpg" alt="岩が転がる殺生石の荒れた斜面と石碑" loading="lazy"><span class="st__time">10:30</span></div>
+<div class="st__tx"><div class="t">10:30</div><h3>殺生石</h3><p>硫黄のにおいが立ちこめる荒れた河原。柵の外は立入禁止で、木も生えない一帯が続きます。木道の散策は30分ほど。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E6%AE%BA%E7%94%9F%E7%9F%B3" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nasu-03.jpg" alt="南ヶ丘牧場の池と、松に囲まれたのどかな園内" loading="lazy"><span class="st__time">11:30</span></div>
+<div class="st__tx"><div class="t">11:30</div><h3>南ヶ丘牧場</h3><p>入場も駐車も無料の牧場。濃いジャージー牛乳とソフトクリームが目当てです。動物との距離が近く、のんびりするのにちょうどいい場所。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E3%83%B6%E4%B8%98%E7%89%A7%E5%A0%B4" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">13:00</div><h3>昼ごはん</h3><p>那須街道沿いにはベーカリーやカフェが点在しています。牧場でだいぶ食べているはずなので、軽めで十分。</p></div></li><li class="st rv"><div class="st__img"><img src="images/nasu-05.jpg" alt="森の谷に架かる長いつつじ吊橋" loading="lazy"><span class="st__time">14:00</span></div>
+<div class="st__tx"><div class="t">14:00</div><h3>つつじ吊橋、または美術館</h3><p>森の上に架かる長い吊り橋を渡るか、ステンドグラス美術館のような屋内で静かに過ごすか。天気で決められるのが那須のいいところです。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E3%81%A4%E3%81%A4%E3%81%98%E5%90%8A%E6%A9%8B%20%E9%82%A3%E9%A0%88" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st rv"><div class="st__img"><img src="images/nasu-06.jpg" alt="道の駅 那須高原友愛の森の看板と、丸みのある木造の建物" loading="lazy"><span class="st__time">15:30</span></div>
+<div class="st__tx"><div class="t">15:30</div><h3>道の駅 那須高原友愛の森</h3><p>地元の野菜や果物が並ぶ道の駅。9月下旬なら梨やりんごが出ています。焼きたてのラスクを売る店も那須街道沿いにあるので、翌朝の朝ごはんになるものを選んで帰路へ。</p><a class="pin" href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E9%82%A3%E9%A0%88%E9%AB%98%E5%8E%9F%E5%8F%8B%E6%84%9B%E3%81%AE%E6%A3%AE" target="_blank" rel="noopener">GOOGLE MAPS ↗</a></div></li><li class="st st--noimg rv"><div class="st__tx"><div class="t">16:30</div><h3>帰路</h3><p>東北道の上りは佐野から先で流れが悪くなりがち。休憩を長めに取って、時間をずらしながら帰ります。</p></div></li></ol>
+<div class="tip rv"><b>EDITOR'S TIP</b><p>山頂駅から先は、標高1,700m近い場所の風です。9月下旬でも風が吹けば体感は一桁になることがあるので、ウインドブレーカーは必ず持っていくこと。逆に下界の那須高原は日中まだ暖かいので、脱ぎ着できる格好が正解です。</p></div>
+</div></section>
+</main>
+<footer class="end">
+<div class="end__in">
+<div><div class="sec-h"><span class="en">BEFORE YOU GO</span><span class="jp">出かける前に</span></div><ul style="padding-left:1.1em;margin:0"><li><b>日にちの選び方</b>下りの高速は19日（土）の午前が最も重く、上りは23日（水）の午後がピークになりがちです。二人の予定が合うなら、真ん中の21日（月）か22日（火）が比較的動きやすい日。</li><li><b>帰りの時間</b>15時前に走り出すか、19時以降までずらすか。中途半端な17〜18時台がいちばん損をします。現地で夕飯を食べてから帰るほうが、車内の空気も穏やかです。</li><li><b>服装</b>9月下旬でも標高が上がると朝晩は肌寒く、奥日光や鍾乳洞は薄手の上着が必要。逆に日中の平地はまだ暑いので、脱ぎ着できる格好で。</li><li><b>運転の分担</b>片道2時間を超えるコースは、行きと帰りで交代できると本当に楽になります。免許と保険の条件だけ先に確認しておくこと。</li><li><b>天気で入れ替える</b>雨予報なら、屋外中心の茶臼岳や鋸山より、勝沼か伊香保のほうが崩れにくい。ぶどう狩りは屋根のある園も多く、温泉は雨でも成立します。</li><li><b>富士山を見たい日は朝勝負</b>河口湖コースだけは、出発時刻がそのまま満足度に直結します。前夜に準備を済ませて、6時には家を出られる日にあてること。</li></ul></div>
+<div><div class="sec-h"><span class="en">PACKING</span><span class="jp">積んでおくもの</span></div><ul class="checklist"><li><label><input type="checkbox" value="0"><span>羽織もの</span></label></li><li><label><input type="checkbox" value="1"><span>スニーカー</span></label></li><li><label><input type="checkbox" value="2"><span>日焼け止め</span></label></li><li><label><input type="checkbox" value="3"><span>モバイルバッテリー</span></label></li><li><label><input type="checkbox" value="4"><span>保冷バッグ（那珂湊）</span></label></li><li><label><input type="checkbox" value="5"><span>薄手の上着（奥多摩・奥日光）</span></label></li><li><label><input type="checkbox" value="6"><span>飲みもの・眠気覚まし</span></label></li><li><label><input type="checkbox" value="7"><span>ETCカード・免許証</span></label></li><li><label><input type="checkbox" value="8"><span>タオル・ビニール袋（伊香保）</span></label></li><li><label><input type="checkbox" value="9"><span>保冷バッグ（勝沼）</span></label></li><li><label><input type="checkbox" value="10"><span>ウインドブレーカー（那須）</span></label></li></ul><button class="reset" type="button">CLEAR ALL</button></div>
+</div>
+<p class="fine">掲載の所要時間・費用・営業条件は2026年9月時点のおおよその目安です。受付方法や料金、運航・開園の状況は、出発前に各施設の公式情報でご確認ください。チェックの状態はこの端末のブラウザに保存されます。</p>
+<p class="foot">SEE YOU ON THE ROAD</p>
+</footer>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.12});
+document.querySelectorAll('.rv,.hero').forEach(function(el){io.observe(el);});
+var prog=document.querySelector('.prog'),chip=document.querySelector('.chip'),cover=document.querySelector('.cover__img');
+var feats=[].slice.call(document.querySelectorAll('.feat'));
+var root=document.documentElement;
+function onScroll(){
+  var y=window.scrollY,h=document.body.scrollHeight-innerHeight;
+  prog.style.width=(y/h*100)+'%';
+  if(cover&&!RM&&y<innerHeight)cover.style.transform='translateY('+(y*.28)+'px)';
+  var cur=null;feats.forEach(function(f){if(f.getBoundingClientRect().top<innerHeight*.5)cur=f;});
+  if(cur){root.style.setProperty('--ac',cur.dataset.ac);chip.textContent='NO.'+cur.dataset.no+'  '+cur.dataset.name;chip.href='#'+cur.id;chip.classList.add('on');}
+  else{root.style.setProperty('--ac','#F2A93B');chip.classList.remove('on');}
+}
+addEventListener('scroll',function(){requestAnimationFrame(onScroll);},{passive:true});onScroll();
+var LS=function(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}};
+document.querySelectorAll('.checklist input').forEach(function(c){var k='mag:check:'+c.value;c.checked=LS(k)==='1';c.addEventListener('change',function(){LS(k,c.checked?'1':'0');});});
+var rs=document.querySelector('.reset');if(rs)rs.addEventListener('click',function(){document.querySelectorAll('.checklist input').forEach(function(c){c.checked=false;LS('mag:check:'+c.value,'0');});});
+})();
+</script></body></html>
